@@ -1,0 +1,1786 @@
+TimeQuest Timing Analyzer report for TEXT_CONVERT
+Mon Jul 05 23:01:46 2021
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. SDC File List
+  5. Clocks
+  6. Slow Model Fmax Summary
+  7. Slow Model Setup Summary
+  8. Slow Model Hold Summary
+  9. Slow Model Recovery Summary
+ 10. Slow Model Removal Summary
+ 11. Slow Model Minimum Pulse Width Summary
+ 12. Slow Model Setup: 'CLK'
+ 13. Slow Model Hold: 'CLK'
+ 14. Slow Model Minimum Pulse Width: 'CLK'
+ 15. Setup Times
+ 16. Hold Times
+ 17. Clock to Output Times
+ 18. Minimum Clock to Output Times
+ 19. Propagation Delay
+ 20. Minimum Propagation Delay
+ 21. Output Enable Times
+ 22. Minimum Output Enable Times
+ 23. Output Disable Times
+ 24. Minimum Output Disable Times
+ 25. Fast Model Setup Summary
+ 26. Fast Model Hold Summary
+ 27. Fast Model Recovery Summary
+ 28. Fast Model Removal Summary
+ 29. Fast Model Minimum Pulse Width Summary
+ 30. Fast Model Setup: 'CLK'
+ 31. Fast Model Hold: 'CLK'
+ 32. Fast Model Minimum Pulse Width: 'CLK'
+ 33. Setup Times
+ 34. Hold Times
+ 35. Clock to Output Times
+ 36. Minimum Clock to Output Times
+ 37. Propagation Delay
+ 38. Minimum Propagation Delay
+ 39. Output Enable Times
+ 40. Minimum Output Enable Times
+ 41. Output Disable Times
+ 42. Minimum Output Disable Times
+ 43. Multicorner Timing Analysis Summary
+ 44. Setup Times
+ 45. Hold Times
+ 46. Clock to Output Times
+ 47. Minimum Clock to Output Times
+ 48. Progagation Delay
+ 49. Minimum Progagation Delay
+ 50. Setup Transfers
+ 51. Hold Transfers
+ 52. Report TCCS
+ 53. Report RSKM
+ 54. Unconstrained Paths
+ 55. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                      ;
++--------------------+-------------------------------------------------------------------+
+; Quartus II Version ; Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition ;
+; Revision Name      ; TEXT_CONVERT                                                      ;
+; Device Family      ; Cyclone II                                                        ;
+; Device Name        ; EP2C20F484C7                                                      ;
+; Timing Models      ; Final                                                             ;
+; Delay Model        ; Combined                                                          ;
+; Rise/Fall Delays   ; Unavailable                                                       ;
++--------------------+-------------------------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-8         ;   0.0%      ;
++----------------------------+-------------+
+
+
++----------------------------------------------------------------+
+; SDC File List                                                  ;
++----------------------------+--------+--------------------------+
+; SDC File Path              ; Status ; Read at                  ;
++----------------------------+--------+--------------------------+
+; text_convert_synthesis.sdc ; OK     ; Mon Jul 05 23:01:45 2021 ;
++----------------------------+--------+--------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                          ;
++------------+------+--------+-----------+-------+--------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; Clock Name ; Type ; Period ; Frequency ; Rise  ; Fall   ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets ;
++------------+------+--------+-----------+-------+--------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; CLK        ; Base ; 37.037 ; 27.0 MHz  ; 0.000 ; 18.518 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { CLK } ;
++------------+------+--------+-----------+-------+--------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+
+
++-------------------------------------------------+
+; Slow Model Fmax Summary                         ;
++-----------+-----------------+------------+------+
+; Fmax      ; Restricted Fmax ; Clock Name ; Note ;
++-----------+-----------------+------------+------+
+; 93.91 MHz ; 93.91 MHz       ; CLK        ;      ;
++-----------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++--------------------------------+
+; Slow Model Setup Summary       ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; CLK   ; 26.389 ; 0.000         ;
++-------+--------+---------------+
+
+
++-------------------------------+
+; Slow Model Hold Summary       ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; CLK   ; 0.445 ; 0.000         ;
++-------+-------+---------------+
+
+
+-------------------------------
+; Slow Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Slow Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Slow Model Minimum Pulse Width Summary ;
++-------+--------+-----------------------+
+; Clock ; Slack  ; End Point TNS         ;
++-------+--------+-----------------------+
+; CLK   ; 17.407 ; 0.000                 ;
++-------+--------+-----------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'CLK'                                                                                                                                                    ;
++--------+-----------------------------------------------+---------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                     ; To Node                                     ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------------------------------------------+---------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 26.389 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[10]      ; bin2bcd_12bit_sync:u3_bin2bcd|tenths[1]     ; CLK          ; CLK         ; 37.037       ; -0.005     ; 10.681     ;
+; 26.390 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[10]      ; bin2bcd_12bit_sync:u3_bin2bcd|hunderths[0]  ; CLK          ; CLK         ; 37.037       ; -0.005     ; 10.680     ;
+; 26.392 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[10]      ; bin2bcd_12bit_sync:u3_bin2bcd|tenths[2]     ; CLK          ; CLK         ; 37.037       ; -0.005     ; 10.678     ;
+; 26.393 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[10]      ; bin2bcd_12bit_sync:u3_bin2bcd|tenths[3]     ; CLK          ; CLK         ; 37.037       ; -0.005     ; 10.677     ;
+; 26.477 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[9]       ; bin2bcd_12bit_sync:u3_bin2bcd|tenths[1]     ; CLK          ; CLK         ; 37.037       ; -0.005     ; 10.593     ;
+; 26.478 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[9]       ; bin2bcd_12bit_sync:u3_bin2bcd|hunderths[0]  ; CLK          ; CLK         ; 37.037       ; -0.005     ; 10.592     ;
+; 26.480 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[9]       ; bin2bcd_12bit_sync:u3_bin2bcd|tenths[2]     ; CLK          ; CLK         ; 37.037       ; -0.005     ; 10.590     ;
+; 26.481 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[9]       ; bin2bcd_12bit_sync:u3_bin2bcd|tenths[3]     ; CLK          ; CLK         ; 37.037       ; -0.005     ; 10.589     ;
+; 26.794 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[10]      ; bin2bcd_12bit_sync:u3_bin2bcd|hunderths[2]  ; CLK          ; CLK         ; 37.037       ; -0.006     ; 10.275     ;
+; 26.795 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[10]      ; bin2bcd_12bit_sync:u3_bin2bcd|hunderths[1]  ; CLK          ; CLK         ; 37.037       ; -0.006     ; 10.274     ;
+; 26.796 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[10]      ; bin2bcd_12bit_sync:u3_bin2bcd|thousands[0]  ; CLK          ; CLK         ; 37.037       ; -0.006     ; 10.273     ;
+; 26.798 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[10]      ; bin2bcd_12bit_sync:u3_bin2bcd|hunderths[3]  ; CLK          ; CLK         ; 37.037       ; -0.006     ; 10.271     ;
+; 26.882 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[9]       ; bin2bcd_12bit_sync:u3_bin2bcd|hunderths[2]  ; CLK          ; CLK         ; 37.037       ; -0.006     ; 10.187     ;
+; 26.883 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[9]       ; bin2bcd_12bit_sync:u3_bin2bcd|hunderths[1]  ; CLK          ; CLK         ; 37.037       ; -0.006     ; 10.186     ;
+; 26.884 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[9]       ; bin2bcd_12bit_sync:u3_bin2bcd|thousands[0]  ; CLK          ; CLK         ; 37.037       ; -0.006     ; 10.185     ;
+; 26.886 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[9]       ; bin2bcd_12bit_sync:u3_bin2bcd|hunderths[3]  ; CLK          ; CLK         ; 37.037       ; -0.006     ; 10.183     ;
+; 26.896 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[10]      ; bin2bcd_12bit_sync:u3_bin2bcd|tenths[0]     ; CLK          ; CLK         ; 37.037       ; -0.009     ; 10.170     ;
+; 26.900 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[10]      ; bin2bcd_12bit_sync:u3_bin2bcd|ones[3]       ; CLK          ; CLK         ; 37.037       ; -0.009     ; 10.166     ;
+; 26.900 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[10]      ; bin2bcd_12bit_sync:u3_bin2bcd|ones[2]       ; CLK          ; CLK         ; 37.037       ; -0.009     ; 10.166     ;
+; 26.901 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[10]      ; bin2bcd_12bit_sync:u3_bin2bcd|ones[1]       ; CLK          ; CLK         ; 37.037       ; -0.009     ; 10.165     ;
+; 26.984 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[9]       ; bin2bcd_12bit_sync:u3_bin2bcd|tenths[0]     ; CLK          ; CLK         ; 37.037       ; -0.009     ; 10.082     ;
+; 26.988 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[9]       ; bin2bcd_12bit_sync:u3_bin2bcd|ones[3]       ; CLK          ; CLK         ; 37.037       ; -0.009     ; 10.078     ;
+; 26.988 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[9]       ; bin2bcd_12bit_sync:u3_bin2bcd|ones[2]       ; CLK          ; CLK         ; 37.037       ; -0.009     ; 10.078     ;
+; 26.989 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[9]       ; bin2bcd_12bit_sync:u3_bin2bcd|ones[1]       ; CLK          ; CLK         ; 37.037       ; -0.009     ; 10.077     ;
+; 27.229 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[11]      ; bin2bcd_12bit_sync:u3_bin2bcd|tenths[1]     ; CLK          ; CLK         ; 37.037       ; -0.005     ; 9.841      ;
+; 27.230 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[11]      ; bin2bcd_12bit_sync:u3_bin2bcd|hunderths[0]  ; CLK          ; CLK         ; 37.037       ; -0.005     ; 9.840      ;
+; 27.232 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[11]      ; bin2bcd_12bit_sync:u3_bin2bcd|tenths[2]     ; CLK          ; CLK         ; 37.037       ; -0.005     ; 9.838      ;
+; 27.233 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[11]      ; bin2bcd_12bit_sync:u3_bin2bcd|tenths[3]     ; CLK          ; CLK         ; 37.037       ; -0.005     ; 9.837      ;
+; 27.518 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[8]       ; bin2bcd_12bit_sync:u3_bin2bcd|tenths[1]     ; CLK          ; CLK         ; 37.037       ; -0.005     ; 9.552      ;
+; 27.519 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[8]       ; bin2bcd_12bit_sync:u3_bin2bcd|hunderths[0]  ; CLK          ; CLK         ; 37.037       ; -0.005     ; 9.551      ;
+; 27.521 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[8]       ; bin2bcd_12bit_sync:u3_bin2bcd|tenths[2]     ; CLK          ; CLK         ; 37.037       ; -0.005     ; 9.549      ;
+; 27.522 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[8]       ; bin2bcd_12bit_sync:u3_bin2bcd|tenths[3]     ; CLK          ; CLK         ; 37.037       ; -0.005     ; 9.548      ;
+; 27.634 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[11]      ; bin2bcd_12bit_sync:u3_bin2bcd|hunderths[2]  ; CLK          ; CLK         ; 37.037       ; -0.006     ; 9.435      ;
+; 27.635 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[11]      ; bin2bcd_12bit_sync:u3_bin2bcd|hunderths[1]  ; CLK          ; CLK         ; 37.037       ; -0.006     ; 9.434      ;
+; 27.636 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[11]      ; bin2bcd_12bit_sync:u3_bin2bcd|thousands[0]  ; CLK          ; CLK         ; 37.037       ; -0.006     ; 9.433      ;
+; 27.638 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[11]      ; bin2bcd_12bit_sync:u3_bin2bcd|hunderths[3]  ; CLK          ; CLK         ; 37.037       ; -0.006     ; 9.431      ;
+; 27.736 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[11]      ; bin2bcd_12bit_sync:u3_bin2bcd|tenths[0]     ; CLK          ; CLK         ; 37.037       ; -0.009     ; 9.330      ;
+; 27.740 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[11]      ; bin2bcd_12bit_sync:u3_bin2bcd|ones[3]       ; CLK          ; CLK         ; 37.037       ; -0.009     ; 9.326      ;
+; 27.740 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[11]      ; bin2bcd_12bit_sync:u3_bin2bcd|ones[2]       ; CLK          ; CLK         ; 37.037       ; -0.009     ; 9.326      ;
+; 27.741 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[11]      ; bin2bcd_12bit_sync:u3_bin2bcd|ones[1]       ; CLK          ; CLK         ; 37.037       ; -0.009     ; 9.325      ;
+; 27.923 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[8]       ; bin2bcd_12bit_sync:u3_bin2bcd|hunderths[2]  ; CLK          ; CLK         ; 37.037       ; -0.006     ; 9.146      ;
+; 27.924 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[8]       ; bin2bcd_12bit_sync:u3_bin2bcd|hunderths[1]  ; CLK          ; CLK         ; 37.037       ; -0.006     ; 9.145      ;
+; 27.925 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[8]       ; bin2bcd_12bit_sync:u3_bin2bcd|thousands[0]  ; CLK          ; CLK         ; 37.037       ; -0.006     ; 9.144      ;
+; 27.927 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[8]       ; bin2bcd_12bit_sync:u3_bin2bcd|hunderths[3]  ; CLK          ; CLK         ; 37.037       ; -0.006     ; 9.142      ;
+; 28.025 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[8]       ; bin2bcd_12bit_sync:u3_bin2bcd|tenths[0]     ; CLK          ; CLK         ; 37.037       ; -0.009     ; 9.041      ;
+; 28.029 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[8]       ; bin2bcd_12bit_sync:u3_bin2bcd|ones[3]       ; CLK          ; CLK         ; 37.037       ; -0.009     ; 9.037      ;
+; 28.029 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[8]       ; bin2bcd_12bit_sync:u3_bin2bcd|ones[2]       ; CLK          ; CLK         ; 37.037       ; -0.009     ; 9.037      ;
+; 28.030 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[8]       ; bin2bcd_12bit_sync:u3_bin2bcd|ones[1]       ; CLK          ; CLK         ; 37.037       ; -0.009     ; 9.036      ;
+; 28.118 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[7]       ; bin2bcd_12bit_sync:u3_bin2bcd|tenths[1]     ; CLK          ; CLK         ; 37.037       ; -0.005     ; 8.952      ;
+; 28.119 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[7]       ; bin2bcd_12bit_sync:u3_bin2bcd|hunderths[0]  ; CLK          ; CLK         ; 37.037       ; -0.005     ; 8.951      ;
+; 28.121 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[7]       ; bin2bcd_12bit_sync:u3_bin2bcd|tenths[2]     ; CLK          ; CLK         ; 37.037       ; -0.005     ; 8.949      ;
+; 28.122 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[7]       ; bin2bcd_12bit_sync:u3_bin2bcd|tenths[3]     ; CLK          ; CLK         ; 37.037       ; -0.005     ; 8.948      ;
+; 28.201 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[10]      ; bin2bcd_12bit_sync:u3_bin2bcd|thousands[1]  ; CLK          ; CLK         ; 37.037       ; -0.006     ; 8.868      ;
+; 28.294 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[9]       ; bin2bcd_12bit_sync:u3_bin2bcd|thousands[1]  ; CLK          ; CLK         ; 37.037       ; -0.006     ; 8.775      ;
+; 28.523 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[7]       ; bin2bcd_12bit_sync:u3_bin2bcd|hunderths[2]  ; CLK          ; CLK         ; 37.037       ; -0.006     ; 8.546      ;
+; 28.524 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[7]       ; bin2bcd_12bit_sync:u3_bin2bcd|hunderths[1]  ; CLK          ; CLK         ; 37.037       ; -0.006     ; 8.545      ;
+; 28.525 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[7]       ; bin2bcd_12bit_sync:u3_bin2bcd|thousands[0]  ; CLK          ; CLK         ; 37.037       ; -0.006     ; 8.544      ;
+; 28.527 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[7]       ; bin2bcd_12bit_sync:u3_bin2bcd|hunderths[3]  ; CLK          ; CLK         ; 37.037       ; -0.006     ; 8.542      ;
+; 28.552 ; CONTROLLER:u2_controller|sram_we_n_sig        ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|TX      ; CLK          ; CLK         ; 37.037       ; 0.009      ; 8.532      ;
+; 28.625 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[7]       ; bin2bcd_12bit_sync:u3_bin2bcd|tenths[0]     ; CLK          ; CLK         ; 37.037       ; -0.009     ; 8.441      ;
+; 28.629 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[7]       ; bin2bcd_12bit_sync:u3_bin2bcd|ones[3]       ; CLK          ; CLK         ; 37.037       ; -0.009     ; 8.437      ;
+; 28.629 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[7]       ; bin2bcd_12bit_sync:u3_bin2bcd|ones[2]       ; CLK          ; CLK         ; 37.037       ; -0.009     ; 8.437      ;
+; 28.630 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[7]       ; bin2bcd_12bit_sync:u3_bin2bcd|ones[1]       ; CLK          ; CLK         ; 37.037       ; -0.009     ; 8.436      ;
+; 28.794 ; CONTROLLER:u2_controller|sram_oe_n_sig        ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|TX      ; CLK          ; CLK         ; 37.037       ; 0.009      ; 8.290      ;
+; 29.046 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[11]      ; bin2bcd_12bit_sync:u3_bin2bcd|thousands[1]  ; CLK          ; CLK         ; 37.037       ; -0.006     ; 8.023      ;
+; 29.330 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[8]       ; bin2bcd_12bit_sync:u3_bin2bcd|thousands[1]  ; CLK          ; CLK         ; 37.037       ; -0.006     ; 7.739      ;
+; 29.410 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[6]       ; bin2bcd_12bit_sync:u3_bin2bcd|tenths[1]     ; CLK          ; CLK         ; 37.037       ; -0.005     ; 7.660      ;
+; 29.411 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[6]       ; bin2bcd_12bit_sync:u3_bin2bcd|hunderths[0]  ; CLK          ; CLK         ; 37.037       ; -0.005     ; 7.659      ;
+; 29.413 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[6]       ; bin2bcd_12bit_sync:u3_bin2bcd|tenths[2]     ; CLK          ; CLK         ; 37.037       ; -0.005     ; 7.657      ;
+; 29.414 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[6]       ; bin2bcd_12bit_sync:u3_bin2bcd|tenths[3]     ; CLK          ; CLK         ; 37.037       ; -0.005     ; 7.656      ;
+; 29.815 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[6]       ; bin2bcd_12bit_sync:u3_bin2bcd|hunderths[2]  ; CLK          ; CLK         ; 37.037       ; -0.006     ; 7.254      ;
+; 29.816 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[6]       ; bin2bcd_12bit_sync:u3_bin2bcd|hunderths[1]  ; CLK          ; CLK         ; 37.037       ; -0.006     ; 7.253      ;
+; 29.817 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[6]       ; bin2bcd_12bit_sync:u3_bin2bcd|thousands[0]  ; CLK          ; CLK         ; 37.037       ; -0.006     ; 7.252      ;
+; 29.819 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[6]       ; bin2bcd_12bit_sync:u3_bin2bcd|hunderths[3]  ; CLK          ; CLK         ; 37.037       ; -0.006     ; 7.250      ;
+; 29.917 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[6]       ; bin2bcd_12bit_sync:u3_bin2bcd|tenths[0]     ; CLK          ; CLK         ; 37.037       ; -0.009     ; 7.149      ;
+; 29.921 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[6]       ; bin2bcd_12bit_sync:u3_bin2bcd|ones[3]       ; CLK          ; CLK         ; 37.037       ; -0.009     ; 7.145      ;
+; 29.921 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[6]       ; bin2bcd_12bit_sync:u3_bin2bcd|ones[2]       ; CLK          ; CLK         ; 37.037       ; -0.009     ; 7.145      ;
+; 29.922 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[6]       ; bin2bcd_12bit_sync:u3_bin2bcd|ones[1]       ; CLK          ; CLK         ; 37.037       ; -0.009     ; 7.144      ;
+; 29.935 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[7]       ; bin2bcd_12bit_sync:u3_bin2bcd|thousands[1]  ; CLK          ; CLK         ; 37.037       ; -0.006     ; 7.134      ;
+; 29.953 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[5]       ; bin2bcd_12bit_sync:u3_bin2bcd|tenths[1]     ; CLK          ; CLK         ; 37.037       ; -0.005     ; 7.117      ;
+; 29.954 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[5]       ; bin2bcd_12bit_sync:u3_bin2bcd|hunderths[0]  ; CLK          ; CLK         ; 37.037       ; -0.005     ; 7.116      ;
+; 29.956 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[5]       ; bin2bcd_12bit_sync:u3_bin2bcd|tenths[2]     ; CLK          ; CLK         ; 37.037       ; -0.005     ; 7.114      ;
+; 29.957 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[5]       ; bin2bcd_12bit_sync:u3_bin2bcd|tenths[3]     ; CLK          ; CLK         ; 37.037       ; -0.005     ; 7.113      ;
+; 30.313 ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|Tx_idx[0] ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|TX      ; CLK          ; CLK         ; 37.037       ; -0.001     ; 6.761      ;
+; 30.365 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[5]       ; bin2bcd_12bit_sync:u3_bin2bcd|hunderths[2]  ; CLK          ; CLK         ; 37.037       ; -0.006     ; 6.704      ;
+; 30.366 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[5]       ; bin2bcd_12bit_sync:u3_bin2bcd|hunderths[1]  ; CLK          ; CLK         ; 37.037       ; -0.006     ; 6.703      ;
+; 30.367 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[5]       ; bin2bcd_12bit_sync:u3_bin2bcd|thousands[0]  ; CLK          ; CLK         ; 37.037       ; -0.006     ; 6.702      ;
+; 30.369 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[5]       ; bin2bcd_12bit_sync:u3_bin2bcd|hunderths[3]  ; CLK          ; CLK         ; 37.037       ; -0.006     ; 6.700      ;
+; 30.452 ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|Tx_idx[1] ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|TX      ; CLK          ; CLK         ; 37.037       ; -0.001     ; 6.622      ;
+; 30.460 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[5]       ; bin2bcd_12bit_sync:u3_bin2bcd|tenths[0]     ; CLK          ; CLK         ; 37.037       ; -0.009     ; 6.606      ;
+; 30.464 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[5]       ; bin2bcd_12bit_sync:u3_bin2bcd|ones[3]       ; CLK          ; CLK         ; 37.037       ; -0.009     ; 6.602      ;
+; 30.464 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[5]       ; bin2bcd_12bit_sync:u3_bin2bcd|ones[2]       ; CLK          ; CLK         ; 37.037       ; -0.009     ; 6.602      ;
+; 30.465 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[5]       ; bin2bcd_12bit_sync:u3_bin2bcd|ones[1]       ; CLK          ; CLK         ; 37.037       ; -0.009     ; 6.601      ;
+; 31.222 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[6]       ; bin2bcd_12bit_sync:u3_bin2bcd|thousands[1]  ; CLK          ; CLK         ; 37.037       ; -0.006     ; 5.847      ;
+; 31.409 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[4]       ; bin2bcd_12bit_sync:u3_bin2bcd|tenths[1]     ; CLK          ; CLK         ; 37.037       ; -0.005     ; 5.661      ;
+; 31.410 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[4]       ; bin2bcd_12bit_sync:u3_bin2bcd|hunderths[0]  ; CLK          ; CLK         ; 37.037       ; -0.005     ; 5.660      ;
+; 31.412 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[4]       ; bin2bcd_12bit_sync:u3_bin2bcd|tenths[2]     ; CLK          ; CLK         ; 37.037       ; -0.005     ; 5.658      ;
+; 31.413 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[4]       ; bin2bcd_12bit_sync:u3_bin2bcd|tenths[3]     ; CLK          ; CLK         ; 37.037       ; -0.005     ; 5.657      ;
+; 31.496 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[5]       ; bin2bcd_12bit_sync:u3_bin2bcd|thousands[1]  ; CLK          ; CLK         ; 37.037       ; -0.006     ; 5.573      ;
+; 31.591 ; CONTROLLER:u2_controller|address_counter[5]   ; CONTROLLER:u2_controller|address_counter[8] ; CLK          ; CLK         ; 37.037       ; 0.000      ; 5.484      ;
++--------+-----------------------------------------------+---------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'CLK'                                                                                                                                                                                    ;
++-------+--------------------------------------------------------------+--------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                                    ; To Node                                                      ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------------------------------------------------+--------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.445 ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|rst_counter              ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|rst_counter              ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|max_cnt[11]              ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|max_cnt[11]              ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|max_cnt[10]              ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|max_cnt[10]              ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|t_bit_flg                ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|t_bit_flg                ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|fsm_state.get_start_bit  ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|fsm_state.get_start_bit  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|Rx_idx[0]                ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|Rx_idx[0]                ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|Rx_idx[1]                ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|Rx_idx[1]                ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|Rx_idx[2]                ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|Rx_idx[2]                ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|fsm_state.get_data       ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|fsm_state.get_data       ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|fsm_state.get_end_bit    ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|fsm_state.get_end_bit    ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|DATA_VALID               ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|DATA_VALID               ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; CONTROLLER:u2_controller|DATA_FROM_MEM_VALID                 ; CONTROLLER:u2_controller|DATA_FROM_MEM_VALID                 ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|t_bit_flg                ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|t_bit_flg                ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|fsm_state.idle           ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|fsm_state.idle           ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|fsm_state.send_start_bit ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|fsm_state.send_start_bit ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|fsm_state.send_data      ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|fsm_state.send_data      ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|fsm_state.send_end_bit   ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|fsm_state.send_end_bit   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; CONTROLLER:u2_controller|fsm_state.transmit                  ; CONTROLLER:u2_controller|fsm_state.transmit                  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; CONTROLLER:u2_controller|fsm_state.idle                      ; CONTROLLER:u2_controller|fsm_state.idle                      ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; CONTROLLER:u2_controller|fsm_state.recive                    ; CONTROLLER:u2_controller|fsm_state.recive                    ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; CONTROLLER:u2_controller|sram_we_n_sig                       ; CONTROLLER:u2_controller|sram_we_n_sig                       ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; CONTROLLER:u2_controller|sram_oe_n_sig                       ; CONTROLLER:u2_controller|sram_oe_n_sig                       ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|DATA[4]                  ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|DATA[4]                  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|DATA[6]                  ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|DATA[6]                  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|DATA[5]                  ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|DATA[5]                  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|DATA[7]                  ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|DATA[7]                  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|DATA[2]                  ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|DATA[2]                  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|DATA[1]                  ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|DATA[1]                  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|DATA[0]                  ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|DATA[0]                  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|DATA[3]                  ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|DATA[3]                  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.629 ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|clk_counter[11]          ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|clk_counter[11]          ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.915      ;
+; 0.635 ; CONTROLLER:u2_controller|stabilizer:u1|a_d2                  ; CONTROLLER:u2_controller|fsm_state.idle                      ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.921      ;
+; 0.641 ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|fsm_state.idle           ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|TX                       ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.927      ;
+; 0.644 ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|fsm_state.idle           ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|fsm_state.get_start_bit  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.930      ;
+; 0.644 ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|fsm_state.get_data       ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|fsm_state.get_end_bit    ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.930      ;
+; 0.686 ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|fsm_state.get_start_bit  ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|fsm_state.get_data       ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.972      ;
+; 0.693 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[11]                     ; bin2bcd_12bit_sync:u3_bin2bcd|thousands[2]                   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.979      ;
+; 0.701 ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|Rx_idx[1]                ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|Rx_idx[3]                ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.987      ;
+; 0.754 ; CONTROLLER:u2_controller|fsm_state.save_data                 ; CONTROLLER:u2_controller|LED2                                ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.040      ;
+; 0.760 ; CONTROLLER:u2_controller|stabilizer:u1|a_d1                  ; CONTROLLER:u2_controller|stabilizer:u1|a_d2                  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.046      ;
+; 0.785 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[0]                      ; bin2bcd_12bit_sync:u3_bin2bcd|ones[0]                        ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.071      ;
+; 0.790 ; CONTROLLER:u2_controller|fsm_state.transmit                  ; CONTROLLER:u2_controller|LED3                                ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.076      ;
+; 0.793 ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|stabilizer:u1|a_d1       ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|stabilizer:u1|a_d2       ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.079      ;
+; 0.837 ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|Rx_idx[0]                ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|Rx_idx[3]                ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.123      ;
+; 0.867 ; CONTROLLER:u2_controller|fsm_state.load_data                 ; CONTROLLER:u2_controller|DATA_FROM_MEM_VALID                 ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.153      ;
+; 0.885 ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|fsm_state.send_end_bit   ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|TX                       ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.171      ;
+; 0.906 ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|t_bit_flg                ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|DONE                     ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.192      ;
+; 0.907 ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|t_bit_flg                ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|fsm_state.send_data      ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.193      ;
+; 0.909 ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|t_bit_flg                ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|fsm_state.send_end_bit   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.195      ;
+; 0.950 ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|fsm_state.send_end_bit   ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|DONE                     ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.236      ;
+; 0.976 ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|clk_counter[8]           ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|clk_counter[8]           ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.262      ;
+; 0.976 ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|clk_counter[10]          ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|clk_counter[10]          ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.262      ;
+; 0.976 ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|fsm_state.send_end_bit   ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|fsm_state.idle           ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.262      ;
+; 0.980 ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|clk_counter[1]           ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|clk_counter[1]           ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.266      ;
+; 0.980 ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|clk_counter[4]           ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|clk_counter[4]           ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.266      ;
+; 0.980 ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|clk_counter[6]           ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|clk_counter[6]           ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.266      ;
+; 0.982 ; CONTROLLER:u2_controller|address_counter[0]                  ; CONTROLLER:u2_controller|address_counter[0]                  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.268      ;
+; 0.983 ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|clk_counter[0]           ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|clk_counter[0]           ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.269      ;
+; 0.983 ; CONTROLLER:u2_controller|fsm_state.recive                    ; CONTROLLER:u2_controller|fsm_state.save_data                 ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.269      ;
+; 0.983 ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|fsm_state.idle           ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|fsm_state.send_start_bit ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.269      ;
+; 0.984 ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|clk_counter[8]           ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|clk_counter[8]           ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.270      ;
+; 0.985 ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|clk_counter[1]           ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|clk_counter[1]           ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.271      ;
+; 0.985 ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|clk_counter[3]           ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|clk_counter[3]           ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.271      ;
+; 0.985 ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|clk_counter[6]           ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|clk_counter[6]           ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.271      ;
+; 0.985 ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|clk_counter[10]          ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|clk_counter[10]          ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.271      ;
+; 0.985 ; CONTROLLER:u2_controller|address_counter[7]                  ; CONTROLLER:u2_controller|address_counter[7]                  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.271      ;
+; 0.985 ; CONTROLLER:u2_controller|down_der:u2|a_d1                    ; CONTROLLER:u2_controller|fsm_state.idle                      ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.271      ;
+; 0.989 ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|Tx_idx[3]                ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|Tx_idx[3]                ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.275      ;
+; 0.990 ; CONTROLLER:u2_controller|fsm_state.transmit                  ; CONTROLLER:u2_controller|sram_we_n_sig                       ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.276      ;
+; 0.991 ; CONTROLLER:u2_controller|address_counter[2]                  ; CONTROLLER:u2_controller|address_counter[2]                  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.277      ;
+; 0.994 ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|Tx_idx[0]                ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|Tx_idx[0]                ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.280      ;
+; 0.994 ; CONTROLLER:u2_controller|address_counter[4]                  ; CONTROLLER:u2_controller|address_counter[4]                  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.280      ;
+; 0.994 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[1]                      ; bin2bcd_12bit_sync:u3_bin2bcd|ones[2]                        ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.280      ;
+; 0.995 ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|fsm_state.send_data      ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|fsm_state.send_end_bit   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.281      ;
+; 0.998 ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|fsm_state.idle           ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|rst_counter              ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.284      ;
+; 1.003 ; CONTROLLER:u2_controller|address_counter[1]                  ; CONTROLLER:u2_controller|address_counter[1]                  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.289      ;
+; 1.004 ; CONTROLLER:u2_controller|stabilizer:u1|a_d2                  ; CONTROLLER:u2_controller|down_der:u2|a_d1                    ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.290      ;
+; 1.010 ; CONTROLLER:u2_controller|address_counter[9]                  ; CONTROLLER:u2_controller|address_counter[9]                  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.296      ;
+; 1.012 ; CONTROLLER:u2_controller|fsm_state.recive                    ; CONTROLLER:u2_controller|fsm_state.load_data                 ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.298      ;
+; 1.012 ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|fsm_state.send_start_bit ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|fsm_state.send_data      ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.298      ;
+; 1.013 ; CONTROLLER:u2_controller|fsm_state.recive                    ; CONTROLLER:u2_controller|LED2                                ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.299      ;
+; 1.014 ; CONTROLLER:u2_controller|fsm_state.recive                    ; CONTROLLER:u2_controller|DATA_FROM_MEM_VALID                 ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.300      ;
+; 1.019 ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|clk_counter[3]           ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|clk_counter[3]           ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.305      ;
+; 1.019 ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|clk_counter[7]           ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|clk_counter[7]           ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.305      ;
+; 1.019 ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|clk_counter[9]           ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|clk_counter[9]           ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.305      ;
+; 1.019 ; CONTROLLER:u2_controller|address_counter[11]                 ; CONTROLLER:u2_controller|address_counter[11]                 ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.305      ;
+; 1.022 ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|clk_counter[0]           ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|clk_counter[0]           ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.308      ;
+; 1.022 ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|clk_counter[7]           ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|clk_counter[7]           ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.308      ;
+; 1.022 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[1]                      ; bin2bcd_12bit_sync:u3_bin2bcd|ones[3]                        ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.308      ;
+; 1.023 ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|clk_counter[5]           ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|clk_counter[5]           ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.309      ;
+; 1.023 ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|clk_counter[2]           ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|clk_counter[2]           ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.309      ;
+; 1.023 ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|clk_counter[5]           ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|clk_counter[5]           ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.309      ;
+; 1.023 ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|clk_counter[9]           ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|clk_counter[9]           ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.309      ;
+; 1.023 ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|clk_counter[11]          ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|clk_counter[11]          ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.309      ;
+; 1.023 ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|clk_counter[4]           ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|clk_counter[4]           ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.309      ;
+; 1.023 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[1]                      ; bin2bcd_12bit_sync:u3_bin2bcd|ones[1]                        ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.309      ;
+; 1.024 ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|clk_counter[2]           ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|clk_counter[2]           ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.310      ;
+; 1.026 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[1]                      ; bin2bcd_12bit_sync:u3_bin2bcd|tenths[0]                      ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.312      ;
+; 1.027 ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|Tx_idx[2]                ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|Tx_idx[2]                ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.313      ;
+; 1.037 ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|Tx_idx[1]                ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|Tx_idx[1]                ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.323      ;
++-------+--------------------------------------------------------------+--------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'CLK'                                                                                                         ;
++--------+--------------+----------------+------------------+-------+------------+--------------------------------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                                                       ;
++--------+--------------+----------------+------------------+-------+------------+--------------------------------------------------------------+
+; 17.407 ; 18.518       ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; CONTROLLER:u2_controller|DATA_FROM_MEM_VALID                 ;
+; 17.407 ; 18.518       ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; CONTROLLER:u2_controller|LED2                                ;
+; 17.407 ; 18.518       ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; CONTROLLER:u2_controller|LED3                                ;
+; 17.407 ; 18.518       ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; CONTROLLER:u2_controller|address_counter[0]                  ;
+; 17.407 ; 18.518       ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; CONTROLLER:u2_controller|address_counter[10]                 ;
+; 17.407 ; 18.518       ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; CONTROLLER:u2_controller|address_counter[11]                 ;
+; 17.407 ; 18.518       ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; CONTROLLER:u2_controller|address_counter[1]                  ;
+; 17.407 ; 18.518       ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; CONTROLLER:u2_controller|address_counter[2]                  ;
+; 17.407 ; 18.518       ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; CONTROLLER:u2_controller|address_counter[3]                  ;
+; 17.407 ; 18.518       ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; CONTROLLER:u2_controller|address_counter[4]                  ;
+; 17.407 ; 18.518       ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; CONTROLLER:u2_controller|address_counter[5]                  ;
+; 17.407 ; 18.518       ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; CONTROLLER:u2_controller|address_counter[6]                  ;
+; 17.407 ; 18.518       ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; CONTROLLER:u2_controller|address_counter[7]                  ;
+; 17.407 ; 18.518       ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; CONTROLLER:u2_controller|address_counter[8]                  ;
+; 17.407 ; 18.518       ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; CONTROLLER:u2_controller|address_counter[9]                  ;
+; 17.407 ; 18.518       ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; CONTROLLER:u2_controller|down_der:u2|a_d1                    ;
+; 17.407 ; 18.518       ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; CONTROLLER:u2_controller|fsm_state.idle                      ;
+; 17.407 ; 18.518       ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; CONTROLLER:u2_controller|fsm_state.load_data                 ;
+; 17.407 ; 18.518       ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; CONTROLLER:u2_controller|fsm_state.recive                    ;
+; 17.407 ; 18.518       ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; CONTROLLER:u2_controller|fsm_state.save_data                 ;
+; 17.407 ; 18.518       ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; CONTROLLER:u2_controller|fsm_state.transmit                  ;
+; 17.407 ; 18.518       ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; CONTROLLER:u2_controller|sram_oe_n_sig                       ;
+; 17.407 ; 18.518       ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; CONTROLLER:u2_controller|sram_we_n_sig                       ;
+; 17.407 ; 18.518       ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; CONTROLLER:u2_controller|stabilizer:u1|a_d1                  ;
+; 17.407 ; 18.518       ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; CONTROLLER:u2_controller|stabilizer:u1|a_d2                  ;
+; 17.407 ; 18.518       ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|DATA[0]                  ;
+; 17.407 ; 18.518       ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|DATA[1]                  ;
+; 17.407 ; 18.518       ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|DATA[2]                  ;
+; 17.407 ; 18.518       ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|DATA[3]                  ;
+; 17.407 ; 18.518       ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|DATA[4]                  ;
+; 17.407 ; 18.518       ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|DATA[5]                  ;
+; 17.407 ; 18.518       ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|DATA[6]                  ;
+; 17.407 ; 18.518       ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|DATA[7]                  ;
+; 17.407 ; 18.518       ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|DATA_VALID               ;
+; 17.407 ; 18.518       ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|Rx_idx[0]                ;
+; 17.407 ; 18.518       ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|Rx_idx[1]                ;
+; 17.407 ; 18.518       ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|Rx_idx[2]                ;
+; 17.407 ; 18.518       ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|Rx_idx[3]                ;
+; 17.407 ; 18.518       ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|clk_counter[0]           ;
+; 17.407 ; 18.518       ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|clk_counter[10]          ;
+; 17.407 ; 18.518       ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|clk_counter[11]          ;
+; 17.407 ; 18.518       ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|clk_counter[1]           ;
+; 17.407 ; 18.518       ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|clk_counter[2]           ;
+; 17.407 ; 18.518       ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|clk_counter[3]           ;
+; 17.407 ; 18.518       ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|clk_counter[4]           ;
+; 17.407 ; 18.518       ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|clk_counter[5]           ;
+; 17.407 ; 18.518       ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|clk_counter[6]           ;
+; 17.407 ; 18.518       ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|clk_counter[7]           ;
+; 17.407 ; 18.518       ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|clk_counter[8]           ;
+; 17.407 ; 18.518       ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|clk_counter[9]           ;
+; 17.407 ; 18.518       ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|fsm_state.get_data       ;
+; 17.407 ; 18.518       ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|fsm_state.get_end_bit    ;
+; 17.407 ; 18.518       ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|fsm_state.get_start_bit  ;
+; 17.407 ; 18.518       ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|fsm_state.idle           ;
+; 17.407 ; 18.518       ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|max_cnt[10]              ;
+; 17.407 ; 18.518       ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|max_cnt[11]              ;
+; 17.407 ; 18.518       ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|rst_counter              ;
+; 17.407 ; 18.518       ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|stabilizer:u1|a_d1       ;
+; 17.407 ; 18.518       ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|stabilizer:u1|a_d2       ;
+; 17.407 ; 18.518       ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|t_bit_flg                ;
+; 17.407 ; 18.518       ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|DONE                     ;
+; 17.407 ; 18.518       ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|TX                       ;
+; 17.407 ; 18.518       ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|Tx_idx[0]                ;
+; 17.407 ; 18.518       ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|Tx_idx[1]                ;
+; 17.407 ; 18.518       ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|Tx_idx[2]                ;
+; 17.407 ; 18.518       ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|Tx_idx[3]                ;
+; 17.407 ; 18.518       ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|clk_counter[0]           ;
+; 17.407 ; 18.518       ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|clk_counter[10]          ;
+; 17.407 ; 18.518       ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|clk_counter[11]          ;
+; 17.407 ; 18.518       ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|clk_counter[1]           ;
+; 17.407 ; 18.518       ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|clk_counter[2]           ;
+; 17.407 ; 18.518       ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|clk_counter[3]           ;
+; 17.407 ; 18.518       ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|clk_counter[4]           ;
+; 17.407 ; 18.518       ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|clk_counter[5]           ;
+; 17.407 ; 18.518       ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|clk_counter[6]           ;
+; 17.407 ; 18.518       ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|clk_counter[7]           ;
+; 17.407 ; 18.518       ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|clk_counter[8]           ;
+; 17.407 ; 18.518       ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|clk_counter[9]           ;
+; 17.407 ; 18.518       ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|fsm_state.idle           ;
+; 17.407 ; 18.518       ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|fsm_state.send_data      ;
+; 17.407 ; 18.518       ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|fsm_state.send_end_bit   ;
+; 17.407 ; 18.518       ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|fsm_state.send_start_bit ;
+; 17.407 ; 18.518       ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|t_bit_flg                ;
+; 17.407 ; 18.518       ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; bin2bcd_12bit_sync:u3_bin2bcd|hunderths[0]                   ;
+; 17.407 ; 18.518       ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; bin2bcd_12bit_sync:u3_bin2bcd|hunderths[1]                   ;
+; 17.407 ; 18.518       ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; bin2bcd_12bit_sync:u3_bin2bcd|hunderths[2]                   ;
+; 17.407 ; 18.518       ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; bin2bcd_12bit_sync:u3_bin2bcd|hunderths[3]                   ;
+; 17.407 ; 18.518       ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; bin2bcd_12bit_sync:u3_bin2bcd|ones[0]                        ;
+; 17.407 ; 18.518       ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; bin2bcd_12bit_sync:u3_bin2bcd|ones[1]                        ;
+; 17.407 ; 18.518       ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; bin2bcd_12bit_sync:u3_bin2bcd|ones[2]                        ;
+; 17.407 ; 18.518       ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; bin2bcd_12bit_sync:u3_bin2bcd|ones[3]                        ;
+; 17.407 ; 18.518       ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[0]                      ;
+; 17.407 ; 18.518       ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[10]                     ;
+; 17.407 ; 18.518       ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[11]                     ;
+; 17.407 ; 18.518       ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[1]                      ;
+; 17.407 ; 18.518       ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[2]                      ;
+; 17.407 ; 18.518       ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[3]                      ;
+; 17.407 ; 18.518       ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[4]                      ;
+; 17.407 ; 18.518       ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[5]                      ;
+; 17.407 ; 18.518       ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[6]                      ;
++--------+--------------+----------------+------------------+-------+------------+--------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------+
+; Setup Times                                                               ;
++-------------+------------+--------+--------+------------+-----------------+
+; Data Port   ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-------------+------------+--------+--------+------------+-----------------+
+; MODE        ; CLK        ; 4.613  ; 4.613  ; Rise       ; CLK             ;
+; RST         ; CLK        ; 6.748  ; 6.748  ; Rise       ; CLK             ;
+; SER_RX      ; CLK        ; 4.772  ; 4.772  ; Rise       ; CLK             ;
+; SRAM_DQ[*]  ; CLK        ; 10.030 ; 10.030 ; Rise       ; CLK             ;
+;  SRAM_DQ[0] ; CLK        ; 10.030 ; 10.030 ; Rise       ; CLK             ;
+;  SRAM_DQ[1] ; CLK        ; 9.303  ; 9.303  ; Rise       ; CLK             ;
+;  SRAM_DQ[2] ; CLK        ; 7.973  ; 7.973  ; Rise       ; CLK             ;
+;  SRAM_DQ[3] ; CLK        ; 8.132  ; 8.132  ; Rise       ; CLK             ;
+;  SRAM_DQ[4] ; CLK        ; 9.023  ; 9.023  ; Rise       ; CLK             ;
+;  SRAM_DQ[5] ; CLK        ; 7.755  ; 7.755  ; Rise       ; CLK             ;
+;  SRAM_DQ[6] ; CLK        ; 9.146  ; 9.146  ; Rise       ; CLK             ;
+;  SRAM_DQ[7] ; CLK        ; 8.252  ; 8.252  ; Rise       ; CLK             ;
++-------------+------------+--------+--------+------------+-----------------+
+
+
++---------------------------------------------------------------------------+
+; Hold Times                                                                ;
++-------------+------------+--------+--------+------------+-----------------+
+; Data Port   ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-------------+------------+--------+--------+------------+-----------------+
+; MODE        ; CLK        ; -4.365 ; -4.365 ; Rise       ; CLK             ;
+; RST         ; CLK        ; -4.671 ; -4.671 ; Rise       ; CLK             ;
+; SER_RX      ; CLK        ; -4.524 ; -4.524 ; Rise       ; CLK             ;
+; SRAM_DQ[*]  ; CLK        ; -7.507 ; -7.507 ; Rise       ; CLK             ;
+;  SRAM_DQ[0] ; CLK        ; -9.342 ; -9.342 ; Rise       ; CLK             ;
+;  SRAM_DQ[1] ; CLK        ; -8.615 ; -8.615 ; Rise       ; CLK             ;
+;  SRAM_DQ[2] ; CLK        ; -7.725 ; -7.725 ; Rise       ; CLK             ;
+;  SRAM_DQ[3] ; CLK        ; -7.884 ; -7.884 ; Rise       ; CLK             ;
+;  SRAM_DQ[4] ; CLK        ; -7.959 ; -7.959 ; Rise       ; CLK             ;
+;  SRAM_DQ[5] ; CLK        ; -7.507 ; -7.507 ; Rise       ; CLK             ;
+;  SRAM_DQ[6] ; CLK        ; -8.082 ; -8.082 ; Rise       ; CLK             ;
+;  SRAM_DQ[7] ; CLK        ; -8.004 ; -8.004 ; Rise       ; CLK             ;
++-------------+------------+--------+--------+------------+-----------------+
+
+
++----------------------------------------------------------------------------+
+; Clock to Output Times                                                      ;
++----------------+------------+-------+-------+------------+-----------------+
+; Data Port      ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++----------------+------------+-------+-------+------------+-----------------+
+; LED2           ; CLK        ; 8.877 ; 8.877 ; Rise       ; CLK             ;
+; LED3           ; CLK        ; 9.513 ; 9.513 ; Rise       ; CLK             ;
+; NUM_HUNDS[*]   ; CLK        ; 8.667 ; 8.667 ; Rise       ; CLK             ;
+;  NUM_HUNDS[0]  ; CLK        ; 8.274 ; 8.274 ; Rise       ; CLK             ;
+;  NUM_HUNDS[1]  ; CLK        ; 8.292 ; 8.292 ; Rise       ; CLK             ;
+;  NUM_HUNDS[2]  ; CLK        ; 8.660 ; 8.660 ; Rise       ; CLK             ;
+;  NUM_HUNDS[3]  ; CLK        ; 8.662 ; 8.662 ; Rise       ; CLK             ;
+;  NUM_HUNDS[4]  ; CLK        ; 8.664 ; 8.664 ; Rise       ; CLK             ;
+;  NUM_HUNDS[5]  ; CLK        ; 8.627 ; 8.627 ; Rise       ; CLK             ;
+;  NUM_HUNDS[6]  ; CLK        ; 8.667 ; 8.667 ; Rise       ; CLK             ;
+; NUM_ONES[*]    ; CLK        ; 8.302 ; 8.302 ; Rise       ; CLK             ;
+;  NUM_ONES[0]   ; CLK        ; 7.692 ; 7.692 ; Rise       ; CLK             ;
+;  NUM_ONES[1]   ; CLK        ; 7.722 ; 7.722 ; Rise       ; CLK             ;
+;  NUM_ONES[2]   ; CLK        ; 8.302 ; 8.302 ; Rise       ; CLK             ;
+;  NUM_ONES[3]   ; CLK        ; 7.934 ; 7.934 ; Rise       ; CLK             ;
+;  NUM_ONES[4]   ; CLK        ; 8.074 ; 8.074 ; Rise       ; CLK             ;
+;  NUM_ONES[5]   ; CLK        ; 8.044 ; 8.044 ; Rise       ; CLK             ;
+;  NUM_ONES[6]   ; CLK        ; 8.072 ; 8.072 ; Rise       ; CLK             ;
+; NUM_TENS[*]    ; CLK        ; 8.630 ; 8.630 ; Rise       ; CLK             ;
+;  NUM_TENS[0]   ; CLK        ; 8.620 ; 8.620 ; Rise       ; CLK             ;
+;  NUM_TENS[1]   ; CLK        ; 8.246 ; 8.246 ; Rise       ; CLK             ;
+;  NUM_TENS[2]   ; CLK        ; 8.246 ; 8.246 ; Rise       ; CLK             ;
+;  NUM_TENS[3]   ; CLK        ; 8.253 ; 8.253 ; Rise       ; CLK             ;
+;  NUM_TENS[4]   ; CLK        ; 8.263 ; 8.263 ; Rise       ; CLK             ;
+;  NUM_TENS[5]   ; CLK        ; 8.630 ; 8.630 ; Rise       ; CLK             ;
+;  NUM_TENS[6]   ; CLK        ; 8.627 ; 8.627 ; Rise       ; CLK             ;
+; NUM_THOUS[*]   ; CLK        ; 8.943 ; 8.943 ; Rise       ; CLK             ;
+;  NUM_THOUS[0]  ; CLK        ; 8.624 ; 8.624 ; Rise       ; CLK             ;
+;  NUM_THOUS[1]  ; CLK        ; 8.943 ; 8.943 ; Rise       ; CLK             ;
+;  NUM_THOUS[2]  ; CLK        ; 8.931 ; 8.931 ; Rise       ; CLK             ;
+;  NUM_THOUS[3]  ; CLK        ; 8.762 ; 8.762 ; Rise       ; CLK             ;
+;  NUM_THOUS[4]  ; CLK        ; 8.752 ; 8.752 ; Rise       ; CLK             ;
+;  NUM_THOUS[5]  ; CLK        ; 8.411 ; 8.411 ; Rise       ; CLK             ;
+;  NUM_THOUS[6]  ; CLK        ; 8.772 ; 8.772 ; Rise       ; CLK             ;
+; SER_TX         ; CLK        ; 8.577 ; 8.577 ; Rise       ; CLK             ;
+; SRAM_ADDR[*]   ; CLK        ; 8.888 ; 8.888 ; Rise       ; CLK             ;
+;  SRAM_ADDR[0]  ; CLK        ; 8.611 ; 8.611 ; Rise       ; CLK             ;
+;  SRAM_ADDR[1]  ; CLK        ; 8.805 ; 8.805 ; Rise       ; CLK             ;
+;  SRAM_ADDR[2]  ; CLK        ; 8.841 ; 8.841 ; Rise       ; CLK             ;
+;  SRAM_ADDR[3]  ; CLK        ; 8.838 ; 8.838 ; Rise       ; CLK             ;
+;  SRAM_ADDR[4]  ; CLK        ; 8.539 ; 8.539 ; Rise       ; CLK             ;
+;  SRAM_ADDR[5]  ; CLK        ; 8.878 ; 8.878 ; Rise       ; CLK             ;
+;  SRAM_ADDR[6]  ; CLK        ; 8.888 ; 8.888 ; Rise       ; CLK             ;
+;  SRAM_ADDR[7]  ; CLK        ; 8.886 ; 8.886 ; Rise       ; CLK             ;
+;  SRAM_ADDR[8]  ; CLK        ; 8.796 ; 8.796 ; Rise       ; CLK             ;
+;  SRAM_ADDR[9]  ; CLK        ; 8.564 ; 8.564 ; Rise       ; CLK             ;
+;  SRAM_ADDR[10] ; CLK        ; 8.577 ; 8.577 ; Rise       ; CLK             ;
+;  SRAM_ADDR[11] ; CLK        ; 8.565 ; 8.565 ; Rise       ; CLK             ;
+; SRAM_DQ[*]     ; CLK        ; 7.879 ; 7.879 ; Rise       ; CLK             ;
+;  SRAM_DQ[0]    ; CLK        ; 7.879 ; 7.879 ; Rise       ; CLK             ;
+;  SRAM_DQ[1]    ; CLK        ; 7.843 ; 7.843 ; Rise       ; CLK             ;
+;  SRAM_DQ[2]    ; CLK        ; 7.570 ; 7.570 ; Rise       ; CLK             ;
+;  SRAM_DQ[3]    ; CLK        ; 7.597 ; 7.597 ; Rise       ; CLK             ;
+;  SRAM_DQ[4]    ; CLK        ; 7.274 ; 7.274 ; Rise       ; CLK             ;
+;  SRAM_DQ[5]    ; CLK        ; 7.285 ; 7.285 ; Rise       ; CLK             ;
+;  SRAM_DQ[6]    ; CLK        ; 7.578 ; 7.578 ; Rise       ; CLK             ;
+;  SRAM_DQ[7]    ; CLK        ; 7.585 ; 7.585 ; Rise       ; CLK             ;
+; SRAM_OE_N      ; CLK        ; 8.841 ; 8.841 ; Rise       ; CLK             ;
+; SRAM_WE_N      ; CLK        ; 8.883 ; 8.883 ; Rise       ; CLK             ;
++----------------+------------+-------+-------+------------+-----------------+
+
+
++----------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                              ;
++----------------+------------+-------+-------+------------+-----------------+
+; Data Port      ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++----------------+------------+-------+-------+------------+-----------------+
+; LED2           ; CLK        ; 8.877 ; 8.877 ; Rise       ; CLK             ;
+; LED3           ; CLK        ; 9.513 ; 9.513 ; Rise       ; CLK             ;
+; NUM_HUNDS[*]   ; CLK        ; 7.823 ; 7.823 ; Rise       ; CLK             ;
+;  NUM_HUNDS[0]  ; CLK        ; 7.823 ; 7.823 ; Rise       ; CLK             ;
+;  NUM_HUNDS[1]  ; CLK        ; 7.844 ; 7.844 ; Rise       ; CLK             ;
+;  NUM_HUNDS[2]  ; CLK        ; 8.209 ; 8.209 ; Rise       ; CLK             ;
+;  NUM_HUNDS[3]  ; CLK        ; 8.214 ; 8.214 ; Rise       ; CLK             ;
+;  NUM_HUNDS[4]  ; CLK        ; 8.213 ; 8.213 ; Rise       ; CLK             ;
+;  NUM_HUNDS[5]  ; CLK        ; 8.181 ; 8.181 ; Rise       ; CLK             ;
+;  NUM_HUNDS[6]  ; CLK        ; 8.218 ; 8.218 ; Rise       ; CLK             ;
+; NUM_ONES[*]    ; CLK        ; 7.154 ; 7.154 ; Rise       ; CLK             ;
+;  NUM_ONES[0]   ; CLK        ; 7.154 ; 7.154 ; Rise       ; CLK             ;
+;  NUM_ONES[1]   ; CLK        ; 7.184 ; 7.184 ; Rise       ; CLK             ;
+;  NUM_ONES[2]   ; CLK        ; 7.772 ; 7.772 ; Rise       ; CLK             ;
+;  NUM_ONES[3]   ; CLK        ; 7.405 ; 7.405 ; Rise       ; CLK             ;
+;  NUM_ONES[4]   ; CLK        ; 7.497 ; 7.497 ; Rise       ; CLK             ;
+;  NUM_ONES[5]   ; CLK        ; 7.548 ; 7.548 ; Rise       ; CLK             ;
+;  NUM_ONES[6]   ; CLK        ; 7.177 ; 7.177 ; Rise       ; CLK             ;
+; NUM_TENS[*]    ; CLK        ; 7.889 ; 7.889 ; Rise       ; CLK             ;
+;  NUM_TENS[0]   ; CLK        ; 8.268 ; 8.268 ; Rise       ; CLK             ;
+;  NUM_TENS[1]   ; CLK        ; 7.889 ; 7.889 ; Rise       ; CLK             ;
+;  NUM_TENS[2]   ; CLK        ; 7.889 ; 7.889 ; Rise       ; CLK             ;
+;  NUM_TENS[3]   ; CLK        ; 7.896 ; 7.896 ; Rise       ; CLK             ;
+;  NUM_TENS[4]   ; CLK        ; 7.905 ; 7.905 ; Rise       ; CLK             ;
+;  NUM_TENS[5]   ; CLK        ; 8.273 ; 8.273 ; Rise       ; CLK             ;
+;  NUM_TENS[6]   ; CLK        ; 8.270 ; 8.270 ; Rise       ; CLK             ;
+; NUM_THOUS[*]   ; CLK        ; 8.063 ; 8.063 ; Rise       ; CLK             ;
+;  NUM_THOUS[0]  ; CLK        ; 8.272 ; 8.272 ; Rise       ; CLK             ;
+;  NUM_THOUS[1]  ; CLK        ; 8.594 ; 8.594 ; Rise       ; CLK             ;
+;  NUM_THOUS[2]  ; CLK        ; 8.584 ; 8.584 ; Rise       ; CLK             ;
+;  NUM_THOUS[3]  ; CLK        ; 8.410 ; 8.410 ; Rise       ; CLK             ;
+;  NUM_THOUS[4]  ; CLK        ; 8.405 ; 8.405 ; Rise       ; CLK             ;
+;  NUM_THOUS[5]  ; CLK        ; 8.063 ; 8.063 ; Rise       ; CLK             ;
+;  NUM_THOUS[6]  ; CLK        ; 8.424 ; 8.424 ; Rise       ; CLK             ;
+; SER_TX         ; CLK        ; 8.577 ; 8.577 ; Rise       ; CLK             ;
+; SRAM_ADDR[*]   ; CLK        ; 8.539 ; 8.539 ; Rise       ; CLK             ;
+;  SRAM_ADDR[0]  ; CLK        ; 8.611 ; 8.611 ; Rise       ; CLK             ;
+;  SRAM_ADDR[1]  ; CLK        ; 8.805 ; 8.805 ; Rise       ; CLK             ;
+;  SRAM_ADDR[2]  ; CLK        ; 8.841 ; 8.841 ; Rise       ; CLK             ;
+;  SRAM_ADDR[3]  ; CLK        ; 8.838 ; 8.838 ; Rise       ; CLK             ;
+;  SRAM_ADDR[4]  ; CLK        ; 8.539 ; 8.539 ; Rise       ; CLK             ;
+;  SRAM_ADDR[5]  ; CLK        ; 8.878 ; 8.878 ; Rise       ; CLK             ;
+;  SRAM_ADDR[6]  ; CLK        ; 8.888 ; 8.888 ; Rise       ; CLK             ;
+;  SRAM_ADDR[7]  ; CLK        ; 8.886 ; 8.886 ; Rise       ; CLK             ;
+;  SRAM_ADDR[8]  ; CLK        ; 8.796 ; 8.796 ; Rise       ; CLK             ;
+;  SRAM_ADDR[9]  ; CLK        ; 8.564 ; 8.564 ; Rise       ; CLK             ;
+;  SRAM_ADDR[10] ; CLK        ; 8.577 ; 8.577 ; Rise       ; CLK             ;
+;  SRAM_ADDR[11] ; CLK        ; 8.565 ; 8.565 ; Rise       ; CLK             ;
+; SRAM_DQ[*]     ; CLK        ; 7.274 ; 7.274 ; Rise       ; CLK             ;
+;  SRAM_DQ[0]    ; CLK        ; 7.879 ; 7.879 ; Rise       ; CLK             ;
+;  SRAM_DQ[1]    ; CLK        ; 7.843 ; 7.843 ; Rise       ; CLK             ;
+;  SRAM_DQ[2]    ; CLK        ; 7.570 ; 7.570 ; Rise       ; CLK             ;
+;  SRAM_DQ[3]    ; CLK        ; 7.597 ; 7.597 ; Rise       ; CLK             ;
+;  SRAM_DQ[4]    ; CLK        ; 7.274 ; 7.274 ; Rise       ; CLK             ;
+;  SRAM_DQ[5]    ; CLK        ; 7.285 ; 7.285 ; Rise       ; CLK             ;
+;  SRAM_DQ[6]    ; CLK        ; 7.578 ; 7.578 ; Rise       ; CLK             ;
+;  SRAM_DQ[7]    ; CLK        ; 7.585 ; 7.585 ; Rise       ; CLK             ;
+; SRAM_OE_N      ; CLK        ; 8.841 ; 8.841 ; Rise       ; CLK             ;
+; SRAM_WE_N      ; CLK        ; 8.883 ; 8.883 ; Rise       ; CLK             ;
++----------------+------------+-------+-------+------------+-----------------+
+
+
++----------------------------------------------------------+
+; Propagation Delay                                        ;
++------------+-------------+-------+-------+-------+-------+
+; Input Port ; Output Port ; RR    ; RF    ; FR    ; FF    ;
++------------+-------------+-------+-------+-------+-------+
+; MODE       ; LED4        ;       ; 8.931 ; 8.931 ;       ;
+; SRAM_DQ[0] ; SRAM_DQ[8]  ; 9.777 ;       ;       ; 9.777 ;
+; SRAM_DQ[1] ; SRAM_DQ[9]  ; 9.867 ;       ;       ; 9.867 ;
+; SRAM_DQ[2] ; SRAM_DQ[10] ; 9.608 ;       ;       ; 9.608 ;
+; SRAM_DQ[3] ; SRAM_DQ[11] ; 9.501 ;       ;       ; 9.501 ;
+; SRAM_DQ[4] ; SRAM_DQ[12] ; 9.631 ;       ;       ; 9.631 ;
+; SRAM_DQ[5] ; SRAM_DQ[13] ; 9.727 ;       ;       ; 9.727 ;
+; SRAM_DQ[6] ; SRAM_DQ[14] ; 9.890 ;       ;       ; 9.890 ;
+; SRAM_DQ[7] ; SRAM_DQ[15] ; 9.848 ;       ;       ; 9.848 ;
++------------+-------------+-------+-------+-------+-------+
+
+
++----------------------------------------------------------+
+; Minimum Propagation Delay                                ;
++------------+-------------+-------+-------+-------+-------+
+; Input Port ; Output Port ; RR    ; RF    ; FR    ; FF    ;
++------------+-------------+-------+-------+-------+-------+
+; MODE       ; LED4        ;       ; 8.931 ; 8.931 ;       ;
+; SRAM_DQ[0] ; SRAM_DQ[8]  ; 9.777 ;       ;       ; 9.777 ;
+; SRAM_DQ[1] ; SRAM_DQ[9]  ; 9.867 ;       ;       ; 9.867 ;
+; SRAM_DQ[2] ; SRAM_DQ[10] ; 9.608 ;       ;       ; 9.608 ;
+; SRAM_DQ[3] ; SRAM_DQ[11] ; 9.501 ;       ;       ; 9.501 ;
+; SRAM_DQ[4] ; SRAM_DQ[12] ; 9.631 ;       ;       ; 9.631 ;
+; SRAM_DQ[5] ; SRAM_DQ[13] ; 9.727 ;       ;       ; 9.727 ;
+; SRAM_DQ[6] ; SRAM_DQ[14] ; 9.890 ;       ;       ; 9.890 ;
+; SRAM_DQ[7] ; SRAM_DQ[15] ; 9.848 ;       ;       ; 9.848 ;
++------------+-------------+-------+-------+-------+-------+
+
+
++------------------------------------------------------------------------+
+; Output Enable Times                                                    ;
++-------------+------------+-------+------+------------+-----------------+
+; Data Port   ; Clock Port ; Rise  ; Fall ; Clock Edge ; Clock Reference ;
++-------------+------------+-------+------+------------+-----------------+
+; SRAM_DQ[*]  ; CLK        ; 9.656 ;      ; Rise       ; CLK             ;
+;  SRAM_DQ[0] ; CLK        ; 9.870 ;      ; Rise       ; CLK             ;
+;  SRAM_DQ[1] ; CLK        ; 9.880 ;      ; Rise       ; CLK             ;
+;  SRAM_DQ[2] ; CLK        ; 9.912 ;      ; Rise       ; CLK             ;
+;  SRAM_DQ[3] ; CLK        ; 9.922 ;      ; Rise       ; CLK             ;
+;  SRAM_DQ[4] ; CLK        ; 9.656 ;      ; Rise       ; CLK             ;
+;  SRAM_DQ[5] ; CLK        ; 9.656 ;      ; Rise       ; CLK             ;
+;  SRAM_DQ[6] ; CLK        ; 9.962 ;      ; Rise       ; CLK             ;
+;  SRAM_DQ[7] ; CLK        ; 9.972 ;      ; Rise       ; CLK             ;
++-------------+------------+-------+------+------------+-----------------+
+
+
++------------------------------------------------------------------------+
+; Minimum Output Enable Times                                            ;
++-------------+------------+-------+------+------------+-----------------+
+; Data Port   ; Clock Port ; Rise  ; Fall ; Clock Edge ; Clock Reference ;
++-------------+------------+-------+------+------------+-----------------+
+; SRAM_DQ[*]  ; CLK        ; 9.344 ;      ; Rise       ; CLK             ;
+;  SRAM_DQ[0] ; CLK        ; 9.558 ;      ; Rise       ; CLK             ;
+;  SRAM_DQ[1] ; CLK        ; 9.568 ;      ; Rise       ; CLK             ;
+;  SRAM_DQ[2] ; CLK        ; 9.600 ;      ; Rise       ; CLK             ;
+;  SRAM_DQ[3] ; CLK        ; 9.610 ;      ; Rise       ; CLK             ;
+;  SRAM_DQ[4] ; CLK        ; 9.344 ;      ; Rise       ; CLK             ;
+;  SRAM_DQ[5] ; CLK        ; 9.344 ;      ; Rise       ; CLK             ;
+;  SRAM_DQ[6] ; CLK        ; 9.650 ;      ; Rise       ; CLK             ;
+;  SRAM_DQ[7] ; CLK        ; 9.660 ;      ; Rise       ; CLK             ;
++-------------+------------+-------+------+------------+-----------------+
+
+
++---------------------------------------------------------------------------------+
+; Output Disable Times                                                            ;
++-------------+------------+-----------+-----------+------------+-----------------+
+; Data Port   ; Clock Port ; 0 to Hi-Z ; 1 to Hi-Z ; Clock Edge ; Clock Reference ;
++-------------+------------+-----------+-----------+------------+-----------------+
+; SRAM_DQ[*]  ; CLK        ; 9.656     ;           ; Rise       ; CLK             ;
+;  SRAM_DQ[0] ; CLK        ; 9.870     ;           ; Rise       ; CLK             ;
+;  SRAM_DQ[1] ; CLK        ; 9.880     ;           ; Rise       ; CLK             ;
+;  SRAM_DQ[2] ; CLK        ; 9.912     ;           ; Rise       ; CLK             ;
+;  SRAM_DQ[3] ; CLK        ; 9.922     ;           ; Rise       ; CLK             ;
+;  SRAM_DQ[4] ; CLK        ; 9.656     ;           ; Rise       ; CLK             ;
+;  SRAM_DQ[5] ; CLK        ; 9.656     ;           ; Rise       ; CLK             ;
+;  SRAM_DQ[6] ; CLK        ; 9.962     ;           ; Rise       ; CLK             ;
+;  SRAM_DQ[7] ; CLK        ; 9.972     ;           ; Rise       ; CLK             ;
++-------------+------------+-----------+-----------+------------+-----------------+
+
+
++---------------------------------------------------------------------------------+
+; Minimum Output Disable Times                                                    ;
++-------------+------------+-----------+-----------+------------+-----------------+
+; Data Port   ; Clock Port ; 0 to Hi-Z ; 1 to Hi-Z ; Clock Edge ; Clock Reference ;
++-------------+------------+-----------+-----------+------------+-----------------+
+; SRAM_DQ[*]  ; CLK        ; 9.344     ;           ; Rise       ; CLK             ;
+;  SRAM_DQ[0] ; CLK        ; 9.558     ;           ; Rise       ; CLK             ;
+;  SRAM_DQ[1] ; CLK        ; 9.568     ;           ; Rise       ; CLK             ;
+;  SRAM_DQ[2] ; CLK        ; 9.600     ;           ; Rise       ; CLK             ;
+;  SRAM_DQ[3] ; CLK        ; 9.610     ;           ; Rise       ; CLK             ;
+;  SRAM_DQ[4] ; CLK        ; 9.344     ;           ; Rise       ; CLK             ;
+;  SRAM_DQ[5] ; CLK        ; 9.344     ;           ; Rise       ; CLK             ;
+;  SRAM_DQ[6] ; CLK        ; 9.650     ;           ; Rise       ; CLK             ;
+;  SRAM_DQ[7] ; CLK        ; 9.660     ;           ; Rise       ; CLK             ;
++-------------+------------+-----------+-----------+------------+-----------------+
+
+
++--------------------------------+
+; Fast Model Setup Summary       ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; CLK   ; 33.178 ; 0.000         ;
++-------+--------+---------------+
+
+
++-------------------------------+
+; Fast Model Hold Summary       ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; CLK   ; 0.215 ; 0.000         ;
++-------+-------+---------------+
+
+
+-------------------------------
+; Fast Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Fast Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Fast Model Minimum Pulse Width Summary ;
++-------+--------+-----------------------+
+; Clock ; Slack  ; End Point TNS         ;
++-------+--------+-----------------------+
+; CLK   ; 17.518 ; 0.000                 ;
++-------+--------+-----------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'CLK'                                                                                                                                                     ;
++--------+-----------------------------------------------+----------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                     ; To Node                                      ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------------------------------------------+----------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 33.178 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[10]      ; bin2bcd_12bit_sync:u3_bin2bcd|hunderths[0]   ; CLK          ; CLK         ; 37.037       ; -0.004     ; 3.887      ;
+; 33.180 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[10]      ; bin2bcd_12bit_sync:u3_bin2bcd|tenths[3]      ; CLK          ; CLK         ; 37.037       ; -0.004     ; 3.885      ;
+; 33.180 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[10]      ; bin2bcd_12bit_sync:u3_bin2bcd|tenths[1]      ; CLK          ; CLK         ; 37.037       ; -0.004     ; 3.885      ;
+; 33.183 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[10]      ; bin2bcd_12bit_sync:u3_bin2bcd|tenths[2]      ; CLK          ; CLK         ; 37.037       ; -0.004     ; 3.882      ;
+; 33.229 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[9]       ; bin2bcd_12bit_sync:u3_bin2bcd|hunderths[0]   ; CLK          ; CLK         ; 37.037       ; -0.004     ; 3.836      ;
+; 33.231 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[9]       ; bin2bcd_12bit_sync:u3_bin2bcd|tenths[3]      ; CLK          ; CLK         ; 37.037       ; -0.004     ; 3.834      ;
+; 33.231 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[9]       ; bin2bcd_12bit_sync:u3_bin2bcd|tenths[1]      ; CLK          ; CLK         ; 37.037       ; -0.004     ; 3.834      ;
+; 33.234 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[9]       ; bin2bcd_12bit_sync:u3_bin2bcd|tenths[2]      ; CLK          ; CLK         ; 37.037       ; -0.004     ; 3.831      ;
+; 33.273 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[10]      ; bin2bcd_12bit_sync:u3_bin2bcd|hunderths[2]   ; CLK          ; CLK         ; 37.037       ; -0.005     ; 3.791      ;
+; 33.274 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[10]      ; bin2bcd_12bit_sync:u3_bin2bcd|thousands[0]   ; CLK          ; CLK         ; 37.037       ; -0.005     ; 3.790      ;
+; 33.275 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[10]      ; bin2bcd_12bit_sync:u3_bin2bcd|hunderths[1]   ; CLK          ; CLK         ; 37.037       ; -0.005     ; 3.789      ;
+; 33.276 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[10]      ; bin2bcd_12bit_sync:u3_bin2bcd|hunderths[3]   ; CLK          ; CLK         ; 37.037       ; -0.005     ; 3.788      ;
+; 33.324 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[9]       ; bin2bcd_12bit_sync:u3_bin2bcd|hunderths[2]   ; CLK          ; CLK         ; 37.037       ; -0.005     ; 3.740      ;
+; 33.325 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[9]       ; bin2bcd_12bit_sync:u3_bin2bcd|thousands[0]   ; CLK          ; CLK         ; 37.037       ; -0.005     ; 3.739      ;
+; 33.326 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[9]       ; bin2bcd_12bit_sync:u3_bin2bcd|hunderths[1]   ; CLK          ; CLK         ; 37.037       ; -0.005     ; 3.738      ;
+; 33.327 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[9]       ; bin2bcd_12bit_sync:u3_bin2bcd|hunderths[3]   ; CLK          ; CLK         ; 37.037       ; -0.005     ; 3.737      ;
+; 33.362 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[10]      ; bin2bcd_12bit_sync:u3_bin2bcd|ones[3]        ; CLK          ; CLK         ; 37.037       ; -0.008     ; 3.699      ;
+; 33.362 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[10]      ; bin2bcd_12bit_sync:u3_bin2bcd|ones[2]        ; CLK          ; CLK         ; 37.037       ; -0.008     ; 3.699      ;
+; 33.363 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[10]      ; bin2bcd_12bit_sync:u3_bin2bcd|ones[1]        ; CLK          ; CLK         ; 37.037       ; -0.008     ; 3.698      ;
+; 33.363 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[10]      ; bin2bcd_12bit_sync:u3_bin2bcd|tenths[0]      ; CLK          ; CLK         ; 37.037       ; -0.008     ; 3.698      ;
+; 33.413 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[9]       ; bin2bcd_12bit_sync:u3_bin2bcd|ones[3]        ; CLK          ; CLK         ; 37.037       ; -0.008     ; 3.648      ;
+; 33.413 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[9]       ; bin2bcd_12bit_sync:u3_bin2bcd|ones[2]        ; CLK          ; CLK         ; 37.037       ; -0.008     ; 3.648      ;
+; 33.414 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[9]       ; bin2bcd_12bit_sync:u3_bin2bcd|ones[1]        ; CLK          ; CLK         ; 37.037       ; -0.008     ; 3.647      ;
+; 33.414 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[9]       ; bin2bcd_12bit_sync:u3_bin2bcd|tenths[0]      ; CLK          ; CLK         ; 37.037       ; -0.008     ; 3.647      ;
+; 33.477 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[11]      ; bin2bcd_12bit_sync:u3_bin2bcd|hunderths[0]   ; CLK          ; CLK         ; 37.037       ; -0.004     ; 3.588      ;
+; 33.479 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[11]      ; bin2bcd_12bit_sync:u3_bin2bcd|tenths[3]      ; CLK          ; CLK         ; 37.037       ; -0.004     ; 3.586      ;
+; 33.479 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[11]      ; bin2bcd_12bit_sync:u3_bin2bcd|tenths[1]      ; CLK          ; CLK         ; 37.037       ; -0.004     ; 3.586      ;
+; 33.482 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[11]      ; bin2bcd_12bit_sync:u3_bin2bcd|tenths[2]      ; CLK          ; CLK         ; 37.037       ; -0.004     ; 3.583      ;
+; 33.553 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[8]       ; bin2bcd_12bit_sync:u3_bin2bcd|hunderths[0]   ; CLK          ; CLK         ; 37.037       ; -0.004     ; 3.512      ;
+; 33.555 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[8]       ; bin2bcd_12bit_sync:u3_bin2bcd|tenths[3]      ; CLK          ; CLK         ; 37.037       ; -0.004     ; 3.510      ;
+; 33.555 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[8]       ; bin2bcd_12bit_sync:u3_bin2bcd|tenths[1]      ; CLK          ; CLK         ; 37.037       ; -0.004     ; 3.510      ;
+; 33.558 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[8]       ; bin2bcd_12bit_sync:u3_bin2bcd|tenths[2]      ; CLK          ; CLK         ; 37.037       ; -0.004     ; 3.507      ;
+; 33.572 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[11]      ; bin2bcd_12bit_sync:u3_bin2bcd|hunderths[2]   ; CLK          ; CLK         ; 37.037       ; -0.005     ; 3.492      ;
+; 33.573 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[11]      ; bin2bcd_12bit_sync:u3_bin2bcd|thousands[0]   ; CLK          ; CLK         ; 37.037       ; -0.005     ; 3.491      ;
+; 33.574 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[11]      ; bin2bcd_12bit_sync:u3_bin2bcd|hunderths[1]   ; CLK          ; CLK         ; 37.037       ; -0.005     ; 3.490      ;
+; 33.575 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[11]      ; bin2bcd_12bit_sync:u3_bin2bcd|hunderths[3]   ; CLK          ; CLK         ; 37.037       ; -0.005     ; 3.489      ;
+; 33.648 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[8]       ; bin2bcd_12bit_sync:u3_bin2bcd|hunderths[2]   ; CLK          ; CLK         ; 37.037       ; -0.005     ; 3.416      ;
+; 33.649 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[8]       ; bin2bcd_12bit_sync:u3_bin2bcd|thousands[0]   ; CLK          ; CLK         ; 37.037       ; -0.005     ; 3.415      ;
+; 33.650 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[8]       ; bin2bcd_12bit_sync:u3_bin2bcd|hunderths[1]   ; CLK          ; CLK         ; 37.037       ; -0.005     ; 3.414      ;
+; 33.651 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[8]       ; bin2bcd_12bit_sync:u3_bin2bcd|hunderths[3]   ; CLK          ; CLK         ; 37.037       ; -0.005     ; 3.413      ;
+; 33.661 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[11]      ; bin2bcd_12bit_sync:u3_bin2bcd|ones[3]        ; CLK          ; CLK         ; 37.037       ; -0.008     ; 3.400      ;
+; 33.661 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[11]      ; bin2bcd_12bit_sync:u3_bin2bcd|ones[2]        ; CLK          ; CLK         ; 37.037       ; -0.008     ; 3.400      ;
+; 33.662 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[11]      ; bin2bcd_12bit_sync:u3_bin2bcd|ones[1]        ; CLK          ; CLK         ; 37.037       ; -0.008     ; 3.399      ;
+; 33.662 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[11]      ; bin2bcd_12bit_sync:u3_bin2bcd|tenths[0]      ; CLK          ; CLK         ; 37.037       ; -0.008     ; 3.399      ;
+; 33.737 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[8]       ; bin2bcd_12bit_sync:u3_bin2bcd|ones[3]        ; CLK          ; CLK         ; 37.037       ; -0.008     ; 3.324      ;
+; 33.737 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[8]       ; bin2bcd_12bit_sync:u3_bin2bcd|ones[2]        ; CLK          ; CLK         ; 37.037       ; -0.008     ; 3.324      ;
+; 33.738 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[8]       ; bin2bcd_12bit_sync:u3_bin2bcd|ones[1]        ; CLK          ; CLK         ; 37.037       ; -0.008     ; 3.323      ;
+; 33.738 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[8]       ; bin2bcd_12bit_sync:u3_bin2bcd|tenths[0]      ; CLK          ; CLK         ; 37.037       ; -0.008     ; 3.323      ;
+; 33.764 ; CONTROLLER:u2_controller|sram_we_n_sig        ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|TX       ; CLK          ; CLK         ; 37.037       ; 0.006      ; 3.311      ;
+; 33.794 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[7]       ; bin2bcd_12bit_sync:u3_bin2bcd|hunderths[0]   ; CLK          ; CLK         ; 37.037       ; -0.004     ; 3.271      ;
+; 33.796 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[7]       ; bin2bcd_12bit_sync:u3_bin2bcd|tenths[3]      ; CLK          ; CLK         ; 37.037       ; -0.004     ; 3.269      ;
+; 33.796 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[7]       ; bin2bcd_12bit_sync:u3_bin2bcd|tenths[1]      ; CLK          ; CLK         ; 37.037       ; -0.004     ; 3.269      ;
+; 33.799 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[10]      ; bin2bcd_12bit_sync:u3_bin2bcd|thousands[1]   ; CLK          ; CLK         ; 37.037       ; -0.005     ; 3.265      ;
+; 33.799 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[7]       ; bin2bcd_12bit_sync:u3_bin2bcd|tenths[2]      ; CLK          ; CLK         ; 37.037       ; -0.004     ; 3.266      ;
+; 33.855 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[9]       ; bin2bcd_12bit_sync:u3_bin2bcd|thousands[1]   ; CLK          ; CLK         ; 37.037       ; -0.005     ; 3.209      ;
+; 33.866 ; CONTROLLER:u2_controller|sram_oe_n_sig        ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|TX       ; CLK          ; CLK         ; 37.037       ; 0.006      ; 3.209      ;
+; 33.889 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[7]       ; bin2bcd_12bit_sync:u3_bin2bcd|hunderths[2]   ; CLK          ; CLK         ; 37.037       ; -0.005     ; 3.175      ;
+; 33.890 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[7]       ; bin2bcd_12bit_sync:u3_bin2bcd|thousands[0]   ; CLK          ; CLK         ; 37.037       ; -0.005     ; 3.174      ;
+; 33.891 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[7]       ; bin2bcd_12bit_sync:u3_bin2bcd|hunderths[1]   ; CLK          ; CLK         ; 37.037       ; -0.005     ; 3.173      ;
+; 33.892 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[7]       ; bin2bcd_12bit_sync:u3_bin2bcd|hunderths[3]   ; CLK          ; CLK         ; 37.037       ; -0.005     ; 3.172      ;
+; 33.978 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[7]       ; bin2bcd_12bit_sync:u3_bin2bcd|ones[3]        ; CLK          ; CLK         ; 37.037       ; -0.008     ; 3.083      ;
+; 33.978 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[7]       ; bin2bcd_12bit_sync:u3_bin2bcd|ones[2]        ; CLK          ; CLK         ; 37.037       ; -0.008     ; 3.083      ;
+; 33.979 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[7]       ; bin2bcd_12bit_sync:u3_bin2bcd|ones[1]        ; CLK          ; CLK         ; 37.037       ; -0.008     ; 3.082      ;
+; 33.979 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[7]       ; bin2bcd_12bit_sync:u3_bin2bcd|tenths[0]      ; CLK          ; CLK         ; 37.037       ; -0.008     ; 3.082      ;
+; 34.103 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[11]      ; bin2bcd_12bit_sync:u3_bin2bcd|thousands[1]   ; CLK          ; CLK         ; 37.037       ; -0.005     ; 2.961      ;
+; 34.174 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[8]       ; bin2bcd_12bit_sync:u3_bin2bcd|thousands[1]   ; CLK          ; CLK         ; 37.037       ; -0.005     ; 2.890      ;
+; 34.279 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[6]       ; bin2bcd_12bit_sync:u3_bin2bcd|hunderths[0]   ; CLK          ; CLK         ; 37.037       ; -0.005     ; 2.785      ;
+; 34.281 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[6]       ; bin2bcd_12bit_sync:u3_bin2bcd|tenths[3]      ; CLK          ; CLK         ; 37.037       ; -0.005     ; 2.783      ;
+; 34.281 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[6]       ; bin2bcd_12bit_sync:u3_bin2bcd|tenths[1]      ; CLK          ; CLK         ; 37.037       ; -0.005     ; 2.783      ;
+; 34.284 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[6]       ; bin2bcd_12bit_sync:u3_bin2bcd|tenths[2]      ; CLK          ; CLK         ; 37.037       ; -0.005     ; 2.780      ;
+; 34.374 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[6]       ; bin2bcd_12bit_sync:u3_bin2bcd|hunderths[2]   ; CLK          ; CLK         ; 37.037       ; -0.006     ; 2.689      ;
+; 34.375 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[6]       ; bin2bcd_12bit_sync:u3_bin2bcd|thousands[0]   ; CLK          ; CLK         ; 37.037       ; -0.006     ; 2.688      ;
+; 34.376 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[6]       ; bin2bcd_12bit_sync:u3_bin2bcd|hunderths[1]   ; CLK          ; CLK         ; 37.037       ; -0.006     ; 2.687      ;
+; 34.377 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[6]       ; bin2bcd_12bit_sync:u3_bin2bcd|hunderths[3]   ; CLK          ; CLK         ; 37.037       ; -0.006     ; 2.686      ;
+; 34.411 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[5]       ; bin2bcd_12bit_sync:u3_bin2bcd|hunderths[0]   ; CLK          ; CLK         ; 37.037       ; -0.005     ; 2.653      ;
+; 34.413 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[5]       ; bin2bcd_12bit_sync:u3_bin2bcd|tenths[3]      ; CLK          ; CLK         ; 37.037       ; -0.005     ; 2.651      ;
+; 34.413 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[5]       ; bin2bcd_12bit_sync:u3_bin2bcd|tenths[1]      ; CLK          ; CLK         ; 37.037       ; -0.005     ; 2.651      ;
+; 34.416 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[5]       ; bin2bcd_12bit_sync:u3_bin2bcd|tenths[2]      ; CLK          ; CLK         ; 37.037       ; -0.005     ; 2.648      ;
+; 34.420 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[7]       ; bin2bcd_12bit_sync:u3_bin2bcd|thousands[1]   ; CLK          ; CLK         ; 37.037       ; -0.005     ; 2.644      ;
+; 34.463 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[6]       ; bin2bcd_12bit_sync:u3_bin2bcd|ones[3]        ; CLK          ; CLK         ; 37.037       ; -0.009     ; 2.597      ;
+; 34.463 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[6]       ; bin2bcd_12bit_sync:u3_bin2bcd|ones[2]        ; CLK          ; CLK         ; 37.037       ; -0.009     ; 2.597      ;
+; 34.464 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[6]       ; bin2bcd_12bit_sync:u3_bin2bcd|ones[1]        ; CLK          ; CLK         ; 37.037       ; -0.009     ; 2.596      ;
+; 34.464 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[6]       ; bin2bcd_12bit_sync:u3_bin2bcd|tenths[0]      ; CLK          ; CLK         ; 37.037       ; -0.009     ; 2.596      ;
+; 34.491 ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|Tx_idx[0] ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|TX       ; CLK          ; CLK         ; 37.037       ; -0.001     ; 2.577      ;
+; 34.511 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[5]       ; bin2bcd_12bit_sync:u3_bin2bcd|hunderths[2]   ; CLK          ; CLK         ; 37.037       ; -0.006     ; 2.552      ;
+; 34.512 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[5]       ; bin2bcd_12bit_sync:u3_bin2bcd|thousands[0]   ; CLK          ; CLK         ; 37.037       ; -0.006     ; 2.551      ;
+; 34.513 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[5]       ; bin2bcd_12bit_sync:u3_bin2bcd|hunderths[1]   ; CLK          ; CLK         ; 37.037       ; -0.006     ; 2.550      ;
+; 34.514 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[5]       ; bin2bcd_12bit_sync:u3_bin2bcd|hunderths[3]   ; CLK          ; CLK         ; 37.037       ; -0.006     ; 2.549      ;
+; 34.535 ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|Tx_idx[1] ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|TX       ; CLK          ; CLK         ; 37.037       ; -0.001     ; 2.533      ;
+; 34.595 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[5]       ; bin2bcd_12bit_sync:u3_bin2bcd|ones[3]        ; CLK          ; CLK         ; 37.037       ; -0.009     ; 2.465      ;
+; 34.595 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[5]       ; bin2bcd_12bit_sync:u3_bin2bcd|ones[2]        ; CLK          ; CLK         ; 37.037       ; -0.009     ; 2.465      ;
+; 34.596 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[5]       ; bin2bcd_12bit_sync:u3_bin2bcd|ones[1]        ; CLK          ; CLK         ; 37.037       ; -0.009     ; 2.464      ;
+; 34.596 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[5]       ; bin2bcd_12bit_sync:u3_bin2bcd|tenths[0]      ; CLK          ; CLK         ; 37.037       ; -0.009     ; 2.464      ;
+; 34.812 ; CONTROLLER:u2_controller|address_counter[5]   ; CONTROLLER:u2_controller|address_counter[8]  ; CLK          ; CLK         ; 37.037       ; 0.000      ; 2.257      ;
+; 34.812 ; CONTROLLER:u2_controller|address_counter[5]   ; CONTROLLER:u2_controller|address_counter[9]  ; CLK          ; CLK         ; 37.037       ; 0.000      ; 2.257      ;
+; 34.812 ; CONTROLLER:u2_controller|address_counter[5]   ; CONTROLLER:u2_controller|address_counter[10] ; CLK          ; CLK         ; 37.037       ; 0.000      ; 2.257      ;
+; 34.812 ; CONTROLLER:u2_controller|address_counter[5]   ; CONTROLLER:u2_controller|address_counter[11] ; CLK          ; CLK         ; 37.037       ; 0.000      ; 2.257      ;
+; 34.812 ; CONTROLLER:u2_controller|address_counter[5]   ; CONTROLLER:u2_controller|address_counter[2]  ; CLK          ; CLK         ; 37.037       ; 0.000      ; 2.257      ;
+; 34.812 ; CONTROLLER:u2_controller|address_counter[5]   ; CONTROLLER:u2_controller|address_counter[3]  ; CLK          ; CLK         ; 37.037       ; 0.000      ; 2.257      ;
+; 34.812 ; CONTROLLER:u2_controller|address_counter[5]   ; CONTROLLER:u2_controller|address_counter[1]  ; CLK          ; CLK         ; 37.037       ; 0.000      ; 2.257      ;
++--------+-----------------------------------------------+----------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'CLK'                                                                                                                                                                                    ;
++-------+--------------------------------------------------------------+--------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                                    ; To Node                                                      ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------------------------------------------------+--------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.215 ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|rst_counter              ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|rst_counter              ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|max_cnt[11]              ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|max_cnt[11]              ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|max_cnt[10]              ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|max_cnt[10]              ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|t_bit_flg                ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|t_bit_flg                ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|fsm_state.get_start_bit  ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|fsm_state.get_start_bit  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|Rx_idx[0]                ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|Rx_idx[0]                ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|Rx_idx[1]                ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|Rx_idx[1]                ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|Rx_idx[2]                ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|Rx_idx[2]                ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|fsm_state.get_data       ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|fsm_state.get_data       ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|fsm_state.get_end_bit    ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|fsm_state.get_end_bit    ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|DATA_VALID               ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|DATA_VALID               ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; CONTROLLER:u2_controller|DATA_FROM_MEM_VALID                 ; CONTROLLER:u2_controller|DATA_FROM_MEM_VALID                 ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|t_bit_flg                ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|t_bit_flg                ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|fsm_state.idle           ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|fsm_state.idle           ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|fsm_state.send_start_bit ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|fsm_state.send_start_bit ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|fsm_state.send_data      ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|fsm_state.send_data      ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|fsm_state.send_end_bit   ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|fsm_state.send_end_bit   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; CONTROLLER:u2_controller|fsm_state.transmit                  ; CONTROLLER:u2_controller|fsm_state.transmit                  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; CONTROLLER:u2_controller|fsm_state.idle                      ; CONTROLLER:u2_controller|fsm_state.idle                      ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; CONTROLLER:u2_controller|fsm_state.recive                    ; CONTROLLER:u2_controller|fsm_state.recive                    ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; CONTROLLER:u2_controller|sram_we_n_sig                       ; CONTROLLER:u2_controller|sram_we_n_sig                       ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; CONTROLLER:u2_controller|sram_oe_n_sig                       ; CONTROLLER:u2_controller|sram_oe_n_sig                       ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|DATA[4]                  ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|DATA[4]                  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|DATA[6]                  ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|DATA[6]                  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|DATA[5]                  ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|DATA[5]                  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|DATA[7]                  ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|DATA[7]                  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|DATA[2]                  ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|DATA[2]                  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|DATA[1]                  ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|DATA[1]                  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|DATA[0]                  ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|DATA[0]                  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|DATA[3]                  ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|DATA[3]                  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.245 ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|clk_counter[11]          ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|clk_counter[11]          ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.397      ;
+; 0.247 ; CONTROLLER:u2_controller|stabilizer:u1|a_d2                  ; CONTROLLER:u2_controller|fsm_state.idle                      ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.399      ;
+; 0.251 ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|fsm_state.get_data       ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|fsm_state.get_end_bit    ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.403      ;
+; 0.252 ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|fsm_state.idle           ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|fsm_state.get_start_bit  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.404      ;
+; 0.253 ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|fsm_state.idle           ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|TX                       ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.405      ;
+; 0.275 ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|fsm_state.get_start_bit  ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|fsm_state.get_data       ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.427      ;
+; 0.280 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[11]                     ; bin2bcd_12bit_sync:u3_bin2bcd|thousands[2]                   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.432      ;
+; 0.286 ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|Rx_idx[1]                ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|Rx_idx[3]                ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.438      ;
+; 0.303 ; CONTROLLER:u2_controller|fsm_state.save_data                 ; CONTROLLER:u2_controller|LED2                                ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.455      ;
+; 0.322 ; CONTROLLER:u2_controller|stabilizer:u1|a_d1                  ; CONTROLLER:u2_controller|stabilizer:u1|a_d2                  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.474      ;
+; 0.330 ; CONTROLLER:u2_controller|fsm_state.load_data                 ; CONTROLLER:u2_controller|DATA_FROM_MEM_VALID                 ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.482      ;
+; 0.330 ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|Rx_idx[0]                ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|Rx_idx[3]                ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.482      ;
+; 0.337 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[0]                      ; bin2bcd_12bit_sync:u3_bin2bcd|ones[0]                        ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.489      ;
+; 0.339 ; CONTROLLER:u2_controller|fsm_state.transmit                  ; CONTROLLER:u2_controller|LED3                                ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.491      ;
+; 0.341 ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|stabilizer:u1|a_d1       ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|stabilizer:u1|a_d2       ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.493      ;
+; 0.353 ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|t_bit_flg                ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|fsm_state.send_data      ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.505      ;
+; 0.355 ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|t_bit_flg                ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|DONE                     ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.507      ;
+; 0.355 ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|t_bit_flg                ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|fsm_state.send_end_bit   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.507      ;
+; 0.362 ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|clk_counter[6]           ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|clk_counter[6]           ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.514      ;
+; 0.362 ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|clk_counter[8]           ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|clk_counter[8]           ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.514      ;
+; 0.362 ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|clk_counter[10]          ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|clk_counter[10]          ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.514      ;
+; 0.362 ; CONTROLLER:u2_controller|address_counter[0]                  ; CONTROLLER:u2_controller|address_counter[0]                  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.514      ;
+; 0.366 ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|clk_counter[1]           ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|clk_counter[1]           ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.518      ;
+; 0.366 ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|clk_counter[4]           ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|clk_counter[4]           ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.518      ;
+; 0.366 ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|clk_counter[0]           ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|clk_counter[0]           ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.518      ;
+; 0.366 ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|clk_counter[8]           ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|clk_counter[8]           ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.518      ;
+; 0.366 ; CONTROLLER:u2_controller|address_counter[7]                  ; CONTROLLER:u2_controller|address_counter[7]                  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.518      ;
+; 0.366 ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|fsm_state.send_end_bit   ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|fsm_state.idle           ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.518      ;
+; 0.367 ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|clk_counter[10]          ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|clk_counter[10]          ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.519      ;
+; 0.368 ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|clk_counter[1]           ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|clk_counter[1]           ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.520      ;
+; 0.368 ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|clk_counter[3]           ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|clk_counter[3]           ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.520      ;
+; 0.368 ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|clk_counter[6]           ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|clk_counter[6]           ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.520      ;
+; 0.368 ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|Tx_idx[3]                ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|Tx_idx[3]                ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.520      ;
+; 0.368 ; CONTROLLER:u2_controller|address_counter[4]                  ; CONTROLLER:u2_controller|address_counter[4]                  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.520      ;
+; 0.368 ; CONTROLLER:u2_controller|down_der:u2|a_d1                    ; CONTROLLER:u2_controller|fsm_state.idle                      ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.520      ;
+; 0.369 ; CONTROLLER:u2_controller|address_counter[2]                  ; CONTROLLER:u2_controller|address_counter[2]                  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.521      ;
+; 0.369 ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|fsm_state.send_end_bit   ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|TX                       ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.521      ;
+; 0.369 ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|fsm_state.send_end_bit   ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|DONE                     ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.521      ;
+; 0.370 ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|fsm_state.idle           ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|fsm_state.send_start_bit ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.522      ;
+; 0.371 ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|fsm_state.send_start_bit ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|fsm_state.send_data      ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.523      ;
+; 0.374 ; CONTROLLER:u2_controller|address_counter[1]                  ; CONTROLLER:u2_controller|address_counter[1]                  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.526      ;
+; 0.374 ; CONTROLLER:u2_controller|fsm_state.transmit                  ; CONTROLLER:u2_controller|sram_we_n_sig                       ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.526      ;
+; 0.375 ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|clk_counter[5]           ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|clk_counter[5]           ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.527      ;
+; 0.376 ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|clk_counter[0]           ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|clk_counter[0]           ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.528      ;
+; 0.376 ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|clk_counter[2]           ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|clk_counter[2]           ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.528      ;
+; 0.376 ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|clk_counter[3]           ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|clk_counter[3]           ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.528      ;
+; 0.376 ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|clk_counter[7]           ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|clk_counter[7]           ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.528      ;
+; 0.376 ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|clk_counter[9]           ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|clk_counter[9]           ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.528      ;
+; 0.376 ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|Tx_idx[0]                ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|Tx_idx[0]                ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.528      ;
+; 0.376 ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|fsm_state.idle           ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|rst_counter              ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.528      ;
+; 0.377 ; CONTROLLER:u2_controller|address_counter[9]                  ; CONTROLLER:u2_controller|address_counter[9]                  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.529      ;
+; 0.377 ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|fsm_state.send_data      ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|fsm_state.send_end_bit   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.529      ;
+; 0.378 ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|clk_counter[2]           ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|clk_counter[2]           ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.530      ;
+; 0.378 ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|clk_counter[5]           ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|clk_counter[5]           ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.530      ;
+; 0.378 ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|clk_counter[7]           ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|clk_counter[7]           ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.530      ;
+; 0.378 ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|clk_counter[9]           ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|clk_counter[9]           ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.530      ;
+; 0.378 ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|clk_counter[4]           ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|clk_counter[4]           ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.530      ;
+; 0.379 ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|clk_counter[11]          ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|clk_counter[11]          ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.531      ;
+; 0.379 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[1]                      ; bin2bcd_12bit_sync:u3_bin2bcd|ones[3]                        ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.531      ;
+; 0.379 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[1]                      ; bin2bcd_12bit_sync:u3_bin2bcd|ones[2]                        ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.531      ;
+; 0.379 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[1]                      ; bin2bcd_12bit_sync:u3_bin2bcd|ones[1]                        ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.531      ;
+; 0.379 ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[1]                      ; bin2bcd_12bit_sync:u3_bin2bcd|tenths[0]                      ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.531      ;
+; 0.381 ; CONTROLLER:u2_controller|address_counter[11]                 ; CONTROLLER:u2_controller|address_counter[11]                 ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.533      ;
+; 0.381 ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|Tx_idx[2]                ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|Tx_idx[2]                ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.533      ;
+; 0.382 ; CONTROLLER:u2_controller|fsm_state.recive                    ; CONTROLLER:u2_controller|LED2                                ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.534      ;
+; 0.383 ; CONTROLLER:u2_controller|fsm_state.recive                    ; CONTROLLER:u2_controller|DATA_FROM_MEM_VALID                 ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.535      ;
+; 0.384 ; CONTROLLER:u2_controller|fsm_state.recive                    ; CONTROLLER:u2_controller|fsm_state.load_data                 ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.536      ;
+; 0.386 ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|Tx_idx[1]                ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|Tx_idx[1]                ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.538      ;
+; 0.387 ; CONTROLLER:u2_controller|fsm_state.recive                    ; CONTROLLER:u2_controller|fsm_state.save_data                 ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.539      ;
+; 0.387 ; CONTROLLER:u2_controller|fsm_state.load_data                 ; CONTROLLER:u2_controller|fsm_state.transmit                  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.539      ;
++-------+--------------------------------------------------------------+--------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'CLK'                                                                                                         ;
++--------+--------------+----------------+------------------+-------+------------+--------------------------------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                                                       ;
++--------+--------------+----------------+------------------+-------+------------+--------------------------------------------------------------+
+; 17.518 ; 18.518       ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; CONTROLLER:u2_controller|DATA_FROM_MEM_VALID                 ;
+; 17.518 ; 18.518       ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; CONTROLLER:u2_controller|LED2                                ;
+; 17.518 ; 18.518       ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; CONTROLLER:u2_controller|LED3                                ;
+; 17.518 ; 18.518       ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; CONTROLLER:u2_controller|address_counter[0]                  ;
+; 17.518 ; 18.518       ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; CONTROLLER:u2_controller|address_counter[10]                 ;
+; 17.518 ; 18.518       ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; CONTROLLER:u2_controller|address_counter[11]                 ;
+; 17.518 ; 18.518       ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; CONTROLLER:u2_controller|address_counter[1]                  ;
+; 17.518 ; 18.518       ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; CONTROLLER:u2_controller|address_counter[2]                  ;
+; 17.518 ; 18.518       ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; CONTROLLER:u2_controller|address_counter[3]                  ;
+; 17.518 ; 18.518       ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; CONTROLLER:u2_controller|address_counter[4]                  ;
+; 17.518 ; 18.518       ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; CONTROLLER:u2_controller|address_counter[5]                  ;
+; 17.518 ; 18.518       ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; CONTROLLER:u2_controller|address_counter[6]                  ;
+; 17.518 ; 18.518       ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; CONTROLLER:u2_controller|address_counter[7]                  ;
+; 17.518 ; 18.518       ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; CONTROLLER:u2_controller|address_counter[8]                  ;
+; 17.518 ; 18.518       ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; CONTROLLER:u2_controller|address_counter[9]                  ;
+; 17.518 ; 18.518       ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; CONTROLLER:u2_controller|down_der:u2|a_d1                    ;
+; 17.518 ; 18.518       ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; CONTROLLER:u2_controller|fsm_state.idle                      ;
+; 17.518 ; 18.518       ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; CONTROLLER:u2_controller|fsm_state.load_data                 ;
+; 17.518 ; 18.518       ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; CONTROLLER:u2_controller|fsm_state.recive                    ;
+; 17.518 ; 18.518       ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; CONTROLLER:u2_controller|fsm_state.save_data                 ;
+; 17.518 ; 18.518       ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; CONTROLLER:u2_controller|fsm_state.transmit                  ;
+; 17.518 ; 18.518       ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; CONTROLLER:u2_controller|sram_oe_n_sig                       ;
+; 17.518 ; 18.518       ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; CONTROLLER:u2_controller|sram_we_n_sig                       ;
+; 17.518 ; 18.518       ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; CONTROLLER:u2_controller|stabilizer:u1|a_d1                  ;
+; 17.518 ; 18.518       ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; CONTROLLER:u2_controller|stabilizer:u1|a_d2                  ;
+; 17.518 ; 18.518       ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|DATA[0]                  ;
+; 17.518 ; 18.518       ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|DATA[1]                  ;
+; 17.518 ; 18.518       ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|DATA[2]                  ;
+; 17.518 ; 18.518       ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|DATA[3]                  ;
+; 17.518 ; 18.518       ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|DATA[4]                  ;
+; 17.518 ; 18.518       ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|DATA[5]                  ;
+; 17.518 ; 18.518       ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|DATA[6]                  ;
+; 17.518 ; 18.518       ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|DATA[7]                  ;
+; 17.518 ; 18.518       ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|DATA_VALID               ;
+; 17.518 ; 18.518       ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|Rx_idx[0]                ;
+; 17.518 ; 18.518       ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|Rx_idx[1]                ;
+; 17.518 ; 18.518       ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|Rx_idx[2]                ;
+; 17.518 ; 18.518       ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|Rx_idx[3]                ;
+; 17.518 ; 18.518       ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|clk_counter[0]           ;
+; 17.518 ; 18.518       ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|clk_counter[10]          ;
+; 17.518 ; 18.518       ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|clk_counter[11]          ;
+; 17.518 ; 18.518       ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|clk_counter[1]           ;
+; 17.518 ; 18.518       ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|clk_counter[2]           ;
+; 17.518 ; 18.518       ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|clk_counter[3]           ;
+; 17.518 ; 18.518       ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|clk_counter[4]           ;
+; 17.518 ; 18.518       ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|clk_counter[5]           ;
+; 17.518 ; 18.518       ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|clk_counter[6]           ;
+; 17.518 ; 18.518       ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|clk_counter[7]           ;
+; 17.518 ; 18.518       ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|clk_counter[8]           ;
+; 17.518 ; 18.518       ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|clk_counter[9]           ;
+; 17.518 ; 18.518       ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|fsm_state.get_data       ;
+; 17.518 ; 18.518       ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|fsm_state.get_end_bit    ;
+; 17.518 ; 18.518       ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|fsm_state.get_start_bit  ;
+; 17.518 ; 18.518       ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|fsm_state.idle           ;
+; 17.518 ; 18.518       ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|max_cnt[10]              ;
+; 17.518 ; 18.518       ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|max_cnt[11]              ;
+; 17.518 ; 18.518       ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|rst_counter              ;
+; 17.518 ; 18.518       ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|stabilizer:u1|a_d1       ;
+; 17.518 ; 18.518       ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|stabilizer:u1|a_d2       ;
+; 17.518 ; 18.518       ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; UART_TOP:u1_uart|UART_RX:u1_UART_RX|t_bit_flg                ;
+; 17.518 ; 18.518       ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|DONE                     ;
+; 17.518 ; 18.518       ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|TX                       ;
+; 17.518 ; 18.518       ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|Tx_idx[0]                ;
+; 17.518 ; 18.518       ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|Tx_idx[1]                ;
+; 17.518 ; 18.518       ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|Tx_idx[2]                ;
+; 17.518 ; 18.518       ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|Tx_idx[3]                ;
+; 17.518 ; 18.518       ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|clk_counter[0]           ;
+; 17.518 ; 18.518       ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|clk_counter[10]          ;
+; 17.518 ; 18.518       ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|clk_counter[11]          ;
+; 17.518 ; 18.518       ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|clk_counter[1]           ;
+; 17.518 ; 18.518       ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|clk_counter[2]           ;
+; 17.518 ; 18.518       ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|clk_counter[3]           ;
+; 17.518 ; 18.518       ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|clk_counter[4]           ;
+; 17.518 ; 18.518       ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|clk_counter[5]           ;
+; 17.518 ; 18.518       ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|clk_counter[6]           ;
+; 17.518 ; 18.518       ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|clk_counter[7]           ;
+; 17.518 ; 18.518       ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|clk_counter[8]           ;
+; 17.518 ; 18.518       ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|clk_counter[9]           ;
+; 17.518 ; 18.518       ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|fsm_state.idle           ;
+; 17.518 ; 18.518       ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|fsm_state.send_data      ;
+; 17.518 ; 18.518       ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|fsm_state.send_end_bit   ;
+; 17.518 ; 18.518       ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|fsm_state.send_start_bit ;
+; 17.518 ; 18.518       ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; UART_TOP:u1_uart|UART_TX:u2_UART_TX|t_bit_flg                ;
+; 17.518 ; 18.518       ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; bin2bcd_12bit_sync:u3_bin2bcd|hunderths[0]                   ;
+; 17.518 ; 18.518       ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; bin2bcd_12bit_sync:u3_bin2bcd|hunderths[1]                   ;
+; 17.518 ; 18.518       ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; bin2bcd_12bit_sync:u3_bin2bcd|hunderths[2]                   ;
+; 17.518 ; 18.518       ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; bin2bcd_12bit_sync:u3_bin2bcd|hunderths[3]                   ;
+; 17.518 ; 18.518       ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; bin2bcd_12bit_sync:u3_bin2bcd|ones[0]                        ;
+; 17.518 ; 18.518       ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; bin2bcd_12bit_sync:u3_bin2bcd|ones[1]                        ;
+; 17.518 ; 18.518       ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; bin2bcd_12bit_sync:u3_bin2bcd|ones[2]                        ;
+; 17.518 ; 18.518       ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; bin2bcd_12bit_sync:u3_bin2bcd|ones[3]                        ;
+; 17.518 ; 18.518       ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[0]                      ;
+; 17.518 ; 18.518       ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[10]                     ;
+; 17.518 ; 18.518       ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[11]                     ;
+; 17.518 ; 18.518       ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[1]                      ;
+; 17.518 ; 18.518       ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[2]                      ;
+; 17.518 ; 18.518       ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[3]                      ;
+; 17.518 ; 18.518       ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[4]                      ;
+; 17.518 ; 18.518       ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[5]                      ;
+; 17.518 ; 18.518       ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; bin2bcd_12bit_sync:u3_bin2bcd|reg_in[6]                      ;
++--------+--------------+----------------+------------------+-------+------------+--------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------+
+; Setup Times                                                             ;
++-------------+------------+-------+-------+------------+-----------------+
+; Data Port   ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-------------+------------+-------+-------+------------+-----------------+
+; MODE        ; CLK        ; 2.170 ; 2.170 ; Rise       ; CLK             ;
+; RST         ; CLK        ; 3.067 ; 3.067 ; Rise       ; CLK             ;
+; SER_RX      ; CLK        ; 2.237 ; 2.237 ; Rise       ; CLK             ;
+; SRAM_DQ[*]  ; CLK        ; 4.029 ; 4.029 ; Rise       ; CLK             ;
+;  SRAM_DQ[0] ; CLK        ; 4.029 ; 4.029 ; Rise       ; CLK             ;
+;  SRAM_DQ[1] ; CLK        ; 3.796 ; 3.796 ; Rise       ; CLK             ;
+;  SRAM_DQ[2] ; CLK        ; 3.297 ; 3.297 ; Rise       ; CLK             ;
+;  SRAM_DQ[3] ; CLK        ; 3.356 ; 3.356 ; Rise       ; CLK             ;
+;  SRAM_DQ[4] ; CLK        ; 3.673 ; 3.673 ; Rise       ; CLK             ;
+;  SRAM_DQ[5] ; CLK        ; 3.218 ; 3.218 ; Rise       ; CLK             ;
+;  SRAM_DQ[6] ; CLK        ; 3.731 ; 3.731 ; Rise       ; CLK             ;
+;  SRAM_DQ[7] ; CLK        ; 3.433 ; 3.433 ; Rise       ; CLK             ;
++-------------+------------+-------+-------+------------+-----------------+
+
+
++---------------------------------------------------------------------------+
+; Hold Times                                                                ;
++-------------+------------+--------+--------+------------+-----------------+
+; Data Port   ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-------------+------------+--------+--------+------------+-----------------+
+; MODE        ; CLK        ; -2.050 ; -2.050 ; Rise       ; CLK             ;
+; RST         ; CLK        ; -2.154 ; -2.154 ; Rise       ; CLK             ;
+; SER_RX      ; CLK        ; -2.117 ; -2.117 ; Rise       ; CLK             ;
+; SRAM_DQ[*]  ; CLK        ; -3.098 ; -3.098 ; Rise       ; CLK             ;
+;  SRAM_DQ[0] ; CLK        ; -3.745 ; -3.745 ; Rise       ; CLK             ;
+;  SRAM_DQ[1] ; CLK        ; -3.512 ; -3.512 ; Rise       ; CLK             ;
+;  SRAM_DQ[2] ; CLK        ; -3.177 ; -3.177 ; Rise       ; CLK             ;
+;  SRAM_DQ[3] ; CLK        ; -3.236 ; -3.236 ; Rise       ; CLK             ;
+;  SRAM_DQ[4] ; CLK        ; -3.262 ; -3.262 ; Rise       ; CLK             ;
+;  SRAM_DQ[5] ; CLK        ; -3.098 ; -3.098 ; Rise       ; CLK             ;
+;  SRAM_DQ[6] ; CLK        ; -3.320 ; -3.320 ; Rise       ; CLK             ;
+;  SRAM_DQ[7] ; CLK        ; -3.313 ; -3.313 ; Rise       ; CLK             ;
++-------------+------------+--------+--------+------------+-----------------+
+
+
++----------------------------------------------------------------------------+
+; Clock to Output Times                                                      ;
++----------------+------------+-------+-------+------------+-----------------+
+; Data Port      ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++----------------+------------+-------+-------+------------+-----------------+
+; LED2           ; CLK        ; 4.541 ; 4.541 ; Rise       ; CLK             ;
+; LED3           ; CLK        ; 4.763 ; 4.763 ; Rise       ; CLK             ;
+; NUM_HUNDS[*]   ; CLK        ; 4.379 ; 4.379 ; Rise       ; CLK             ;
+;  NUM_HUNDS[0]  ; CLK        ; 4.201 ; 4.201 ; Rise       ; CLK             ;
+;  NUM_HUNDS[1]  ; CLK        ; 4.214 ; 4.214 ; Rise       ; CLK             ;
+;  NUM_HUNDS[2]  ; CLK        ; 4.379 ; 4.379 ; Rise       ; CLK             ;
+;  NUM_HUNDS[3]  ; CLK        ; 4.379 ; 4.379 ; Rise       ; CLK             ;
+;  NUM_HUNDS[4]  ; CLK        ; 4.376 ; 4.376 ; Rise       ; CLK             ;
+;  NUM_HUNDS[5]  ; CLK        ; 4.350 ; 4.350 ; Rise       ; CLK             ;
+;  NUM_HUNDS[6]  ; CLK        ; 4.374 ; 4.374 ; Rise       ; CLK             ;
+; NUM_ONES[*]    ; CLK        ; 4.211 ; 4.211 ; Rise       ; CLK             ;
+;  NUM_ONES[0]   ; CLK        ; 3.976 ; 3.976 ; Rise       ; CLK             ;
+;  NUM_ONES[1]   ; CLK        ; 4.006 ; 4.006 ; Rise       ; CLK             ;
+;  NUM_ONES[2]   ; CLK        ; 4.211 ; 4.211 ; Rise       ; CLK             ;
+;  NUM_ONES[3]   ; CLK        ; 4.074 ; 4.074 ; Rise       ; CLK             ;
+;  NUM_ONES[4]   ; CLK        ; 4.148 ; 4.148 ; Rise       ; CLK             ;
+;  NUM_ONES[5]   ; CLK        ; 4.154 ; 4.154 ; Rise       ; CLK             ;
+;  NUM_ONES[6]   ; CLK        ; 4.148 ; 4.148 ; Rise       ; CLK             ;
+; NUM_TENS[*]    ; CLK        ; 4.366 ; 4.366 ; Rise       ; CLK             ;
+;  NUM_TENS[0]   ; CLK        ; 4.362 ; 4.362 ; Rise       ; CLK             ;
+;  NUM_TENS[1]   ; CLK        ; 4.196 ; 4.196 ; Rise       ; CLK             ;
+;  NUM_TENS[2]   ; CLK        ; 4.196 ; 4.196 ; Rise       ; CLK             ;
+;  NUM_TENS[3]   ; CLK        ; 4.204 ; 4.204 ; Rise       ; CLK             ;
+;  NUM_TENS[4]   ; CLK        ; 4.214 ; 4.214 ; Rise       ; CLK             ;
+;  NUM_TENS[5]   ; CLK        ; 4.366 ; 4.366 ; Rise       ; CLK             ;
+;  NUM_TENS[6]   ; CLK        ; 4.364 ; 4.364 ; Rise       ; CLK             ;
+; NUM_THOUS[*]   ; CLK        ; 4.566 ; 4.566 ; Rise       ; CLK             ;
+;  NUM_THOUS[0]  ; CLK        ; 4.359 ; 4.359 ; Rise       ; CLK             ;
+;  NUM_THOUS[1]  ; CLK        ; 4.566 ; 4.566 ; Rise       ; CLK             ;
+;  NUM_THOUS[2]  ; CLK        ; 4.557 ; 4.557 ; Rise       ; CLK             ;
+;  NUM_THOUS[3]  ; CLK        ; 4.432 ; 4.432 ; Rise       ; CLK             ;
+;  NUM_THOUS[4]  ; CLK        ; 4.421 ; 4.421 ; Rise       ; CLK             ;
+;  NUM_THOUS[5]  ; CLK        ; 4.295 ; 4.295 ; Rise       ; CLK             ;
+;  NUM_THOUS[6]  ; CLK        ; 4.442 ; 4.442 ; Rise       ; CLK             ;
+; SER_TX         ; CLK        ; 4.510 ; 4.510 ; Rise       ; CLK             ;
+; SRAM_ADDR[*]   ; CLK        ; 4.577 ; 4.577 ; Rise       ; CLK             ;
+;  SRAM_ADDR[0]  ; CLK        ; 4.479 ; 4.479 ; Rise       ; CLK             ;
+;  SRAM_ADDR[1]  ; CLK        ; 4.527 ; 4.527 ; Rise       ; CLK             ;
+;  SRAM_ADDR[2]  ; CLK        ; 4.551 ; 4.551 ; Rise       ; CLK             ;
+;  SRAM_ADDR[3]  ; CLK        ; 4.544 ; 4.544 ; Rise       ; CLK             ;
+;  SRAM_ADDR[4]  ; CLK        ; 4.429 ; 4.429 ; Rise       ; CLK             ;
+;  SRAM_ADDR[5]  ; CLK        ; 4.570 ; 4.570 ; Rise       ; CLK             ;
+;  SRAM_ADDR[6]  ; CLK        ; 4.577 ; 4.577 ; Rise       ; CLK             ;
+;  SRAM_ADDR[7]  ; CLK        ; 4.571 ; 4.571 ; Rise       ; CLK             ;
+;  SRAM_ADDR[8]  ; CLK        ; 4.502 ; 4.502 ; Rise       ; CLK             ;
+;  SRAM_ADDR[9]  ; CLK        ; 4.480 ; 4.480 ; Rise       ; CLK             ;
+;  SRAM_ADDR[10] ; CLK        ; 4.436 ; 4.436 ; Rise       ; CLK             ;
+;  SRAM_ADDR[11] ; CLK        ; 4.435 ; 4.435 ; Rise       ; CLK             ;
+; SRAM_DQ[*]     ; CLK        ; 4.164 ; 4.164 ; Rise       ; CLK             ;
+;  SRAM_DQ[0]    ; CLK        ; 4.164 ; 4.164 ; Rise       ; CLK             ;
+;  SRAM_DQ[1]    ; CLK        ; 4.145 ; 4.145 ; Rise       ; CLK             ;
+;  SRAM_DQ[2]    ; CLK        ; 4.040 ; 4.040 ; Rise       ; CLK             ;
+;  SRAM_DQ[3]    ; CLK        ; 4.063 ; 4.063 ; Rise       ; CLK             ;
+;  SRAM_DQ[4]    ; CLK        ; 3.927 ; 3.927 ; Rise       ; CLK             ;
+;  SRAM_DQ[5]    ; CLK        ; 3.934 ; 3.934 ; Rise       ; CLK             ;
+;  SRAM_DQ[6]    ; CLK        ; 4.042 ; 4.042 ; Rise       ; CLK             ;
+;  SRAM_DQ[7]    ; CLK        ; 4.050 ; 4.050 ; Rise       ; CLK             ;
+; SRAM_OE_N      ; CLK        ; 4.531 ; 4.531 ; Rise       ; CLK             ;
+; SRAM_WE_N      ; CLK        ; 4.574 ; 4.574 ; Rise       ; CLK             ;
++----------------+------------+-------+-------+------------+-----------------+
+
+
++----------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                              ;
++----------------+------------+-------+-------+------------+-----------------+
+; Data Port      ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++----------------+------------+-------+-------+------------+-----------------+
+; LED2           ; CLK        ; 4.541 ; 4.541 ; Rise       ; CLK             ;
+; LED3           ; CLK        ; 4.763 ; 4.763 ; Rise       ; CLK             ;
+; NUM_HUNDS[*]   ; CLK        ; 4.053 ; 4.053 ; Rise       ; CLK             ;
+;  NUM_HUNDS[0]  ; CLK        ; 4.053 ; 4.053 ; Rise       ; CLK             ;
+;  NUM_HUNDS[1]  ; CLK        ; 4.070 ; 4.070 ; Rise       ; CLK             ;
+;  NUM_HUNDS[2]  ; CLK        ; 4.227 ; 4.227 ; Rise       ; CLK             ;
+;  NUM_HUNDS[3]  ; CLK        ; 4.236 ; 4.236 ; Rise       ; CLK             ;
+;  NUM_HUNDS[4]  ; CLK        ; 4.232 ; 4.232 ; Rise       ; CLK             ;
+;  NUM_HUNDS[5]  ; CLK        ; 4.207 ; 4.207 ; Rise       ; CLK             ;
+;  NUM_HUNDS[6]  ; CLK        ; 4.232 ; 4.232 ; Rise       ; CLK             ;
+; NUM_ONES[*]    ; CLK        ; 3.779 ; 3.779 ; Rise       ; CLK             ;
+;  NUM_ONES[0]   ; CLK        ; 3.779 ; 3.779 ; Rise       ; CLK             ;
+;  NUM_ONES[1]   ; CLK        ; 3.809 ; 3.809 ; Rise       ; CLK             ;
+;  NUM_ONES[2]   ; CLK        ; 4.018 ; 4.018 ; Rise       ; CLK             ;
+;  NUM_ONES[3]   ; CLK        ; 3.881 ; 3.881 ; Rise       ; CLK             ;
+;  NUM_ONES[4]   ; CLK        ; 3.951 ; 3.951 ; Rise       ; CLK             ;
+;  NUM_ONES[5]   ; CLK        ; 3.957 ; 3.957 ; Rise       ; CLK             ;
+;  NUM_ONES[6]   ; CLK        ; 3.854 ; 3.854 ; Rise       ; CLK             ;
+; NUM_TENS[*]    ; CLK        ; 4.074 ; 4.074 ; Rise       ; CLK             ;
+;  NUM_TENS[0]   ; CLK        ; 4.240 ; 4.240 ; Rise       ; CLK             ;
+;  NUM_TENS[1]   ; CLK        ; 4.074 ; 4.074 ; Rise       ; CLK             ;
+;  NUM_TENS[2]   ; CLK        ; 4.074 ; 4.074 ; Rise       ; CLK             ;
+;  NUM_TENS[3]   ; CLK        ; 4.082 ; 4.082 ; Rise       ; CLK             ;
+;  NUM_TENS[4]   ; CLK        ; 4.091 ; 4.091 ; Rise       ; CLK             ;
+;  NUM_TENS[5]   ; CLK        ; 4.244 ; 4.244 ; Rise       ; CLK             ;
+;  NUM_TENS[6]   ; CLK        ; 4.243 ; 4.243 ; Rise       ; CLK             ;
+; NUM_THOUS[*]   ; CLK        ; 4.156 ; 4.156 ; Rise       ; CLK             ;
+;  NUM_THOUS[0]  ; CLK        ; 4.214 ; 4.214 ; Rise       ; CLK             ;
+;  NUM_THOUS[1]  ; CLK        ; 4.424 ; 4.424 ; Rise       ; CLK             ;
+;  NUM_THOUS[2]  ; CLK        ; 4.444 ; 4.444 ; Rise       ; CLK             ;
+;  NUM_THOUS[3]  ; CLK        ; 4.287 ; 4.287 ; Rise       ; CLK             ;
+;  NUM_THOUS[4]  ; CLK        ; 4.280 ; 4.280 ; Rise       ; CLK             ;
+;  NUM_THOUS[5]  ; CLK        ; 4.156 ; 4.156 ; Rise       ; CLK             ;
+;  NUM_THOUS[6]  ; CLK        ; 4.300 ; 4.300 ; Rise       ; CLK             ;
+; SER_TX         ; CLK        ; 4.510 ; 4.510 ; Rise       ; CLK             ;
+; SRAM_ADDR[*]   ; CLK        ; 4.429 ; 4.429 ; Rise       ; CLK             ;
+;  SRAM_ADDR[0]  ; CLK        ; 4.479 ; 4.479 ; Rise       ; CLK             ;
+;  SRAM_ADDR[1]  ; CLK        ; 4.527 ; 4.527 ; Rise       ; CLK             ;
+;  SRAM_ADDR[2]  ; CLK        ; 4.551 ; 4.551 ; Rise       ; CLK             ;
+;  SRAM_ADDR[3]  ; CLK        ; 4.544 ; 4.544 ; Rise       ; CLK             ;
+;  SRAM_ADDR[4]  ; CLK        ; 4.429 ; 4.429 ; Rise       ; CLK             ;
+;  SRAM_ADDR[5]  ; CLK        ; 4.570 ; 4.570 ; Rise       ; CLK             ;
+;  SRAM_ADDR[6]  ; CLK        ; 4.577 ; 4.577 ; Rise       ; CLK             ;
+;  SRAM_ADDR[7]  ; CLK        ; 4.571 ; 4.571 ; Rise       ; CLK             ;
+;  SRAM_ADDR[8]  ; CLK        ; 4.502 ; 4.502 ; Rise       ; CLK             ;
+;  SRAM_ADDR[9]  ; CLK        ; 4.480 ; 4.480 ; Rise       ; CLK             ;
+;  SRAM_ADDR[10] ; CLK        ; 4.436 ; 4.436 ; Rise       ; CLK             ;
+;  SRAM_ADDR[11] ; CLK        ; 4.435 ; 4.435 ; Rise       ; CLK             ;
+; SRAM_DQ[*]     ; CLK        ; 3.927 ; 3.927 ; Rise       ; CLK             ;
+;  SRAM_DQ[0]    ; CLK        ; 4.164 ; 4.164 ; Rise       ; CLK             ;
+;  SRAM_DQ[1]    ; CLK        ; 4.145 ; 4.145 ; Rise       ; CLK             ;
+;  SRAM_DQ[2]    ; CLK        ; 4.040 ; 4.040 ; Rise       ; CLK             ;
+;  SRAM_DQ[3]    ; CLK        ; 4.063 ; 4.063 ; Rise       ; CLK             ;
+;  SRAM_DQ[4]    ; CLK        ; 3.927 ; 3.927 ; Rise       ; CLK             ;
+;  SRAM_DQ[5]    ; CLK        ; 3.934 ; 3.934 ; Rise       ; CLK             ;
+;  SRAM_DQ[6]    ; CLK        ; 4.042 ; 4.042 ; Rise       ; CLK             ;
+;  SRAM_DQ[7]    ; CLK        ; 4.050 ; 4.050 ; Rise       ; CLK             ;
+; SRAM_OE_N      ; CLK        ; 4.531 ; 4.531 ; Rise       ; CLK             ;
+; SRAM_WE_N      ; CLK        ; 4.574 ; 4.574 ; Rise       ; CLK             ;
++----------------+------------+-------+-------+------------+-----------------+
+
+
++----------------------------------------------------------+
+; Propagation Delay                                        ;
++------------+-------------+-------+-------+-------+-------+
+; Input Port ; Output Port ; RR    ; RF    ; FR    ; FF    ;
++------------+-------------+-------+-------+-------+-------+
+; MODE       ; LED4        ;       ; 4.787 ; 4.787 ;       ;
+; SRAM_DQ[0] ; SRAM_DQ[8]  ; 5.074 ;       ;       ; 5.074 ;
+; SRAM_DQ[1] ; SRAM_DQ[9]  ; 5.131 ;       ;       ; 5.131 ;
+; SRAM_DQ[2] ; SRAM_DQ[10] ; 5.044 ;       ;       ; 5.044 ;
+; SRAM_DQ[3] ; SRAM_DQ[11] ; 4.974 ;       ;       ; 4.974 ;
+; SRAM_DQ[4] ; SRAM_DQ[12] ; 5.061 ;       ;       ; 5.061 ;
+; SRAM_DQ[5] ; SRAM_DQ[13] ; 5.127 ;       ;       ; 5.127 ;
+; SRAM_DQ[6] ; SRAM_DQ[14] ; 5.151 ;       ;       ; 5.151 ;
+; SRAM_DQ[7] ; SRAM_DQ[15] ; 5.172 ;       ;       ; 5.172 ;
++------------+-------------+-------+-------+-------+-------+
+
+
++----------------------------------------------------------+
+; Minimum Propagation Delay                                ;
++------------+-------------+-------+-------+-------+-------+
+; Input Port ; Output Port ; RR    ; RF    ; FR    ; FF    ;
++------------+-------------+-------+-------+-------+-------+
+; MODE       ; LED4        ;       ; 4.787 ; 4.787 ;       ;
+; SRAM_DQ[0] ; SRAM_DQ[8]  ; 5.074 ;       ;       ; 5.074 ;
+; SRAM_DQ[1] ; SRAM_DQ[9]  ; 5.131 ;       ;       ; 5.131 ;
+; SRAM_DQ[2] ; SRAM_DQ[10] ; 5.044 ;       ;       ; 5.044 ;
+; SRAM_DQ[3] ; SRAM_DQ[11] ; 4.974 ;       ;       ; 4.974 ;
+; SRAM_DQ[4] ; SRAM_DQ[12] ; 5.061 ;       ;       ; 5.061 ;
+; SRAM_DQ[5] ; SRAM_DQ[13] ; 5.127 ;       ;       ; 5.127 ;
+; SRAM_DQ[6] ; SRAM_DQ[14] ; 5.151 ;       ;       ; 5.151 ;
+; SRAM_DQ[7] ; SRAM_DQ[15] ; 5.172 ;       ;       ; 5.172 ;
++------------+-------------+-------+-------+-------+-------+
+
+
++------------------------------------------------------------------------+
+; Output Enable Times                                                    ;
++-------------+------------+-------+------+------------+-----------------+
+; Data Port   ; Clock Port ; Rise  ; Fall ; Clock Edge ; Clock Reference ;
++-------------+------------+-------+------+------------+-----------------+
+; SRAM_DQ[*]  ; CLK        ; 4.830 ;      ; Rise       ; CLK             ;
+;  SRAM_DQ[0] ; CLK        ; 4.893 ;      ; Rise       ; CLK             ;
+;  SRAM_DQ[1] ; CLK        ; 4.903 ;      ; Rise       ; CLK             ;
+;  SRAM_DQ[2] ; CLK        ; 4.912 ;      ; Rise       ; CLK             ;
+;  SRAM_DQ[3] ; CLK        ; 4.922 ;      ; Rise       ; CLK             ;
+;  SRAM_DQ[4] ; CLK        ; 4.831 ;      ; Rise       ; CLK             ;
+;  SRAM_DQ[5] ; CLK        ; 4.830 ;      ; Rise       ; CLK             ;
+;  SRAM_DQ[6] ; CLK        ; 4.942 ;      ; Rise       ; CLK             ;
+;  SRAM_DQ[7] ; CLK        ; 4.952 ;      ; Rise       ; CLK             ;
++-------------+------------+-------+------+------------+-----------------+
+
+
++------------------------------------------------------------------------+
+; Minimum Output Enable Times                                            ;
++-------------+------------+-------+------+------------+-----------------+
+; Data Port   ; Clock Port ; Rise  ; Fall ; Clock Edge ; Clock Reference ;
++-------------+------------+-------+------+------------+-----------------+
+; SRAM_DQ[*]  ; CLK        ; 4.729 ;      ; Rise       ; CLK             ;
+;  SRAM_DQ[0] ; CLK        ; 4.792 ;      ; Rise       ; CLK             ;
+;  SRAM_DQ[1] ; CLK        ; 4.802 ;      ; Rise       ; CLK             ;
+;  SRAM_DQ[2] ; CLK        ; 4.811 ;      ; Rise       ; CLK             ;
+;  SRAM_DQ[3] ; CLK        ; 4.821 ;      ; Rise       ; CLK             ;
+;  SRAM_DQ[4] ; CLK        ; 4.730 ;      ; Rise       ; CLK             ;
+;  SRAM_DQ[5] ; CLK        ; 4.729 ;      ; Rise       ; CLK             ;
+;  SRAM_DQ[6] ; CLK        ; 4.841 ;      ; Rise       ; CLK             ;
+;  SRAM_DQ[7] ; CLK        ; 4.851 ;      ; Rise       ; CLK             ;
++-------------+------------+-------+------+------------+-----------------+
+
+
++---------------------------------------------------------------------------------+
+; Output Disable Times                                                            ;
++-------------+------------+-----------+-----------+------------+-----------------+
+; Data Port   ; Clock Port ; 0 to Hi-Z ; 1 to Hi-Z ; Clock Edge ; Clock Reference ;
++-------------+------------+-----------+-----------+------------+-----------------+
+; SRAM_DQ[*]  ; CLK        ; 4.830     ;           ; Rise       ; CLK             ;
+;  SRAM_DQ[0] ; CLK        ; 4.893     ;           ; Rise       ; CLK             ;
+;  SRAM_DQ[1] ; CLK        ; 4.903     ;           ; Rise       ; CLK             ;
+;  SRAM_DQ[2] ; CLK        ; 4.912     ;           ; Rise       ; CLK             ;
+;  SRAM_DQ[3] ; CLK        ; 4.922     ;           ; Rise       ; CLK             ;
+;  SRAM_DQ[4] ; CLK        ; 4.831     ;           ; Rise       ; CLK             ;
+;  SRAM_DQ[5] ; CLK        ; 4.830     ;           ; Rise       ; CLK             ;
+;  SRAM_DQ[6] ; CLK        ; 4.942     ;           ; Rise       ; CLK             ;
+;  SRAM_DQ[7] ; CLK        ; 4.952     ;           ; Rise       ; CLK             ;
++-------------+------------+-----------+-----------+------------+-----------------+
+
+
++---------------------------------------------------------------------------------+
+; Minimum Output Disable Times                                                    ;
++-------------+------------+-----------+-----------+------------+-----------------+
+; Data Port   ; Clock Port ; 0 to Hi-Z ; 1 to Hi-Z ; Clock Edge ; Clock Reference ;
++-------------+------------+-----------+-----------+------------+-----------------+
+; SRAM_DQ[*]  ; CLK        ; 4.729     ;           ; Rise       ; CLK             ;
+;  SRAM_DQ[0] ; CLK        ; 4.792     ;           ; Rise       ; CLK             ;
+;  SRAM_DQ[1] ; CLK        ; 4.802     ;           ; Rise       ; CLK             ;
+;  SRAM_DQ[2] ; CLK        ; 4.811     ;           ; Rise       ; CLK             ;
+;  SRAM_DQ[3] ; CLK        ; 4.821     ;           ; Rise       ; CLK             ;
+;  SRAM_DQ[4] ; CLK        ; 4.730     ;           ; Rise       ; CLK             ;
+;  SRAM_DQ[5] ; CLK        ; 4.729     ;           ; Rise       ; CLK             ;
+;  SRAM_DQ[6] ; CLK        ; 4.841     ;           ; Rise       ; CLK             ;
+;  SRAM_DQ[7] ; CLK        ; 4.851     ;           ; Rise       ; CLK             ;
++-------------+------------+-----------+-----------+------------+-----------------+
+
+
++------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                          ;
++------------------+--------+-------+----------+---------+---------------------+
+; Clock            ; Setup  ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+--------+-------+----------+---------+---------------------+
+; Worst-case Slack ; 26.389 ; 0.215 ; N/A      ; N/A     ; 17.407              ;
+;  CLK             ; 26.389 ; 0.215 ; N/A      ; N/A     ; 17.407              ;
+; Design-wide TNS  ; 0.0    ; 0.0   ; 0.0      ; 0.0     ; 0.0                 ;
+;  CLK             ; 0.000  ; 0.000 ; N/A      ; N/A     ; 0.000               ;
++------------------+--------+-------+----------+---------+---------------------+
+
+
++---------------------------------------------------------------------------+
+; Setup Times                                                               ;
++-------------+------------+--------+--------+------------+-----------------+
+; Data Port   ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-------------+------------+--------+--------+------------+-----------------+
+; MODE        ; CLK        ; 4.613  ; 4.613  ; Rise       ; CLK             ;
+; RST         ; CLK        ; 6.748  ; 6.748  ; Rise       ; CLK             ;
+; SER_RX      ; CLK        ; 4.772  ; 4.772  ; Rise       ; CLK             ;
+; SRAM_DQ[*]  ; CLK        ; 10.030 ; 10.030 ; Rise       ; CLK             ;
+;  SRAM_DQ[0] ; CLK        ; 10.030 ; 10.030 ; Rise       ; CLK             ;
+;  SRAM_DQ[1] ; CLK        ; 9.303  ; 9.303  ; Rise       ; CLK             ;
+;  SRAM_DQ[2] ; CLK        ; 7.973  ; 7.973  ; Rise       ; CLK             ;
+;  SRAM_DQ[3] ; CLK        ; 8.132  ; 8.132  ; Rise       ; CLK             ;
+;  SRAM_DQ[4] ; CLK        ; 9.023  ; 9.023  ; Rise       ; CLK             ;
+;  SRAM_DQ[5] ; CLK        ; 7.755  ; 7.755  ; Rise       ; CLK             ;
+;  SRAM_DQ[6] ; CLK        ; 9.146  ; 9.146  ; Rise       ; CLK             ;
+;  SRAM_DQ[7] ; CLK        ; 8.252  ; 8.252  ; Rise       ; CLK             ;
++-------------+------------+--------+--------+------------+-----------------+
+
+
++---------------------------------------------------------------------------+
+; Hold Times                                                                ;
++-------------+------------+--------+--------+------------+-----------------+
+; Data Port   ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-------------+------------+--------+--------+------------+-----------------+
+; MODE        ; CLK        ; -2.050 ; -2.050 ; Rise       ; CLK             ;
+; RST         ; CLK        ; -2.154 ; -2.154 ; Rise       ; CLK             ;
+; SER_RX      ; CLK        ; -2.117 ; -2.117 ; Rise       ; CLK             ;
+; SRAM_DQ[*]  ; CLK        ; -3.098 ; -3.098 ; Rise       ; CLK             ;
+;  SRAM_DQ[0] ; CLK        ; -3.745 ; -3.745 ; Rise       ; CLK             ;
+;  SRAM_DQ[1] ; CLK        ; -3.512 ; -3.512 ; Rise       ; CLK             ;
+;  SRAM_DQ[2] ; CLK        ; -3.177 ; -3.177 ; Rise       ; CLK             ;
+;  SRAM_DQ[3] ; CLK        ; -3.236 ; -3.236 ; Rise       ; CLK             ;
+;  SRAM_DQ[4] ; CLK        ; -3.262 ; -3.262 ; Rise       ; CLK             ;
+;  SRAM_DQ[5] ; CLK        ; -3.098 ; -3.098 ; Rise       ; CLK             ;
+;  SRAM_DQ[6] ; CLK        ; -3.320 ; -3.320 ; Rise       ; CLK             ;
+;  SRAM_DQ[7] ; CLK        ; -3.313 ; -3.313 ; Rise       ; CLK             ;
++-------------+------------+--------+--------+------------+-----------------+
+
+
++----------------------------------------------------------------------------+
+; Clock to Output Times                                                      ;
++----------------+------------+-------+-------+------------+-----------------+
+; Data Port      ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++----------------+------------+-------+-------+------------+-----------------+
+; LED2           ; CLK        ; 8.877 ; 8.877 ; Rise       ; CLK             ;
+; LED3           ; CLK        ; 9.513 ; 9.513 ; Rise       ; CLK             ;
+; NUM_HUNDS[*]   ; CLK        ; 8.667 ; 8.667 ; Rise       ; CLK             ;
+;  NUM_HUNDS[0]  ; CLK        ; 8.274 ; 8.274 ; Rise       ; CLK             ;
+;  NUM_HUNDS[1]  ; CLK        ; 8.292 ; 8.292 ; Rise       ; CLK             ;
+;  NUM_HUNDS[2]  ; CLK        ; 8.660 ; 8.660 ; Rise       ; CLK             ;
+;  NUM_HUNDS[3]  ; CLK        ; 8.662 ; 8.662 ; Rise       ; CLK             ;
+;  NUM_HUNDS[4]  ; CLK        ; 8.664 ; 8.664 ; Rise       ; CLK             ;
+;  NUM_HUNDS[5]  ; CLK        ; 8.627 ; 8.627 ; Rise       ; CLK             ;
+;  NUM_HUNDS[6]  ; CLK        ; 8.667 ; 8.667 ; Rise       ; CLK             ;
+; NUM_ONES[*]    ; CLK        ; 8.302 ; 8.302 ; Rise       ; CLK             ;
+;  NUM_ONES[0]   ; CLK        ; 7.692 ; 7.692 ; Rise       ; CLK             ;
+;  NUM_ONES[1]   ; CLK        ; 7.722 ; 7.722 ; Rise       ; CLK             ;
+;  NUM_ONES[2]   ; CLK        ; 8.302 ; 8.302 ; Rise       ; CLK             ;
+;  NUM_ONES[3]   ; CLK        ; 7.934 ; 7.934 ; Rise       ; CLK             ;
+;  NUM_ONES[4]   ; CLK        ; 8.074 ; 8.074 ; Rise       ; CLK             ;
+;  NUM_ONES[5]   ; CLK        ; 8.044 ; 8.044 ; Rise       ; CLK             ;
+;  NUM_ONES[6]   ; CLK        ; 8.072 ; 8.072 ; Rise       ; CLK             ;
+; NUM_TENS[*]    ; CLK        ; 8.630 ; 8.630 ; Rise       ; CLK             ;
+;  NUM_TENS[0]   ; CLK        ; 8.620 ; 8.620 ; Rise       ; CLK             ;
+;  NUM_TENS[1]   ; CLK        ; 8.246 ; 8.246 ; Rise       ; CLK             ;
+;  NUM_TENS[2]   ; CLK        ; 8.246 ; 8.246 ; Rise       ; CLK             ;
+;  NUM_TENS[3]   ; CLK        ; 8.253 ; 8.253 ; Rise       ; CLK             ;
+;  NUM_TENS[4]   ; CLK        ; 8.263 ; 8.263 ; Rise       ; CLK             ;
+;  NUM_TENS[5]   ; CLK        ; 8.630 ; 8.630 ; Rise       ; CLK             ;
+;  NUM_TENS[6]   ; CLK        ; 8.627 ; 8.627 ; Rise       ; CLK             ;
+; NUM_THOUS[*]   ; CLK        ; 8.943 ; 8.943 ; Rise       ; CLK             ;
+;  NUM_THOUS[0]  ; CLK        ; 8.624 ; 8.624 ; Rise       ; CLK             ;
+;  NUM_THOUS[1]  ; CLK        ; 8.943 ; 8.943 ; Rise       ; CLK             ;
+;  NUM_THOUS[2]  ; CLK        ; 8.931 ; 8.931 ; Rise       ; CLK             ;
+;  NUM_THOUS[3]  ; CLK        ; 8.762 ; 8.762 ; Rise       ; CLK             ;
+;  NUM_THOUS[4]  ; CLK        ; 8.752 ; 8.752 ; Rise       ; CLK             ;
+;  NUM_THOUS[5]  ; CLK        ; 8.411 ; 8.411 ; Rise       ; CLK             ;
+;  NUM_THOUS[6]  ; CLK        ; 8.772 ; 8.772 ; Rise       ; CLK             ;
+; SER_TX         ; CLK        ; 8.577 ; 8.577 ; Rise       ; CLK             ;
+; SRAM_ADDR[*]   ; CLK        ; 8.888 ; 8.888 ; Rise       ; CLK             ;
+;  SRAM_ADDR[0]  ; CLK        ; 8.611 ; 8.611 ; Rise       ; CLK             ;
+;  SRAM_ADDR[1]  ; CLK        ; 8.805 ; 8.805 ; Rise       ; CLK             ;
+;  SRAM_ADDR[2]  ; CLK        ; 8.841 ; 8.841 ; Rise       ; CLK             ;
+;  SRAM_ADDR[3]  ; CLK        ; 8.838 ; 8.838 ; Rise       ; CLK             ;
+;  SRAM_ADDR[4]  ; CLK        ; 8.539 ; 8.539 ; Rise       ; CLK             ;
+;  SRAM_ADDR[5]  ; CLK        ; 8.878 ; 8.878 ; Rise       ; CLK             ;
+;  SRAM_ADDR[6]  ; CLK        ; 8.888 ; 8.888 ; Rise       ; CLK             ;
+;  SRAM_ADDR[7]  ; CLK        ; 8.886 ; 8.886 ; Rise       ; CLK             ;
+;  SRAM_ADDR[8]  ; CLK        ; 8.796 ; 8.796 ; Rise       ; CLK             ;
+;  SRAM_ADDR[9]  ; CLK        ; 8.564 ; 8.564 ; Rise       ; CLK             ;
+;  SRAM_ADDR[10] ; CLK        ; 8.577 ; 8.577 ; Rise       ; CLK             ;
+;  SRAM_ADDR[11] ; CLK        ; 8.565 ; 8.565 ; Rise       ; CLK             ;
+; SRAM_DQ[*]     ; CLK        ; 7.879 ; 7.879 ; Rise       ; CLK             ;
+;  SRAM_DQ[0]    ; CLK        ; 7.879 ; 7.879 ; Rise       ; CLK             ;
+;  SRAM_DQ[1]    ; CLK        ; 7.843 ; 7.843 ; Rise       ; CLK             ;
+;  SRAM_DQ[2]    ; CLK        ; 7.570 ; 7.570 ; Rise       ; CLK             ;
+;  SRAM_DQ[3]    ; CLK        ; 7.597 ; 7.597 ; Rise       ; CLK             ;
+;  SRAM_DQ[4]    ; CLK        ; 7.274 ; 7.274 ; Rise       ; CLK             ;
+;  SRAM_DQ[5]    ; CLK        ; 7.285 ; 7.285 ; Rise       ; CLK             ;
+;  SRAM_DQ[6]    ; CLK        ; 7.578 ; 7.578 ; Rise       ; CLK             ;
+;  SRAM_DQ[7]    ; CLK        ; 7.585 ; 7.585 ; Rise       ; CLK             ;
+; SRAM_OE_N      ; CLK        ; 8.841 ; 8.841 ; Rise       ; CLK             ;
+; SRAM_WE_N      ; CLK        ; 8.883 ; 8.883 ; Rise       ; CLK             ;
++----------------+------------+-------+-------+------------+-----------------+
+
+
++----------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                              ;
++----------------+------------+-------+-------+------------+-----------------+
+; Data Port      ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++----------------+------------+-------+-------+------------+-----------------+
+; LED2           ; CLK        ; 4.541 ; 4.541 ; Rise       ; CLK             ;
+; LED3           ; CLK        ; 4.763 ; 4.763 ; Rise       ; CLK             ;
+; NUM_HUNDS[*]   ; CLK        ; 4.053 ; 4.053 ; Rise       ; CLK             ;
+;  NUM_HUNDS[0]  ; CLK        ; 4.053 ; 4.053 ; Rise       ; CLK             ;
+;  NUM_HUNDS[1]  ; CLK        ; 4.070 ; 4.070 ; Rise       ; CLK             ;
+;  NUM_HUNDS[2]  ; CLK        ; 4.227 ; 4.227 ; Rise       ; CLK             ;
+;  NUM_HUNDS[3]  ; CLK        ; 4.236 ; 4.236 ; Rise       ; CLK             ;
+;  NUM_HUNDS[4]  ; CLK        ; 4.232 ; 4.232 ; Rise       ; CLK             ;
+;  NUM_HUNDS[5]  ; CLK        ; 4.207 ; 4.207 ; Rise       ; CLK             ;
+;  NUM_HUNDS[6]  ; CLK        ; 4.232 ; 4.232 ; Rise       ; CLK             ;
+; NUM_ONES[*]    ; CLK        ; 3.779 ; 3.779 ; Rise       ; CLK             ;
+;  NUM_ONES[0]   ; CLK        ; 3.779 ; 3.779 ; Rise       ; CLK             ;
+;  NUM_ONES[1]   ; CLK        ; 3.809 ; 3.809 ; Rise       ; CLK             ;
+;  NUM_ONES[2]   ; CLK        ; 4.018 ; 4.018 ; Rise       ; CLK             ;
+;  NUM_ONES[3]   ; CLK        ; 3.881 ; 3.881 ; Rise       ; CLK             ;
+;  NUM_ONES[4]   ; CLK        ; 3.951 ; 3.951 ; Rise       ; CLK             ;
+;  NUM_ONES[5]   ; CLK        ; 3.957 ; 3.957 ; Rise       ; CLK             ;
+;  NUM_ONES[6]   ; CLK        ; 3.854 ; 3.854 ; Rise       ; CLK             ;
+; NUM_TENS[*]    ; CLK        ; 4.074 ; 4.074 ; Rise       ; CLK             ;
+;  NUM_TENS[0]   ; CLK        ; 4.240 ; 4.240 ; Rise       ; CLK             ;
+;  NUM_TENS[1]   ; CLK        ; 4.074 ; 4.074 ; Rise       ; CLK             ;
+;  NUM_TENS[2]   ; CLK        ; 4.074 ; 4.074 ; Rise       ; CLK             ;
+;  NUM_TENS[3]   ; CLK        ; 4.082 ; 4.082 ; Rise       ; CLK             ;
+;  NUM_TENS[4]   ; CLK        ; 4.091 ; 4.091 ; Rise       ; CLK             ;
+;  NUM_TENS[5]   ; CLK        ; 4.244 ; 4.244 ; Rise       ; CLK             ;
+;  NUM_TENS[6]   ; CLK        ; 4.243 ; 4.243 ; Rise       ; CLK             ;
+; NUM_THOUS[*]   ; CLK        ; 4.156 ; 4.156 ; Rise       ; CLK             ;
+;  NUM_THOUS[0]  ; CLK        ; 4.214 ; 4.214 ; Rise       ; CLK             ;
+;  NUM_THOUS[1]  ; CLK        ; 4.424 ; 4.424 ; Rise       ; CLK             ;
+;  NUM_THOUS[2]  ; CLK        ; 4.444 ; 4.444 ; Rise       ; CLK             ;
+;  NUM_THOUS[3]  ; CLK        ; 4.287 ; 4.287 ; Rise       ; CLK             ;
+;  NUM_THOUS[4]  ; CLK        ; 4.280 ; 4.280 ; Rise       ; CLK             ;
+;  NUM_THOUS[5]  ; CLK        ; 4.156 ; 4.156 ; Rise       ; CLK             ;
+;  NUM_THOUS[6]  ; CLK        ; 4.300 ; 4.300 ; Rise       ; CLK             ;
+; SER_TX         ; CLK        ; 4.510 ; 4.510 ; Rise       ; CLK             ;
+; SRAM_ADDR[*]   ; CLK        ; 4.429 ; 4.429 ; Rise       ; CLK             ;
+;  SRAM_ADDR[0]  ; CLK        ; 4.479 ; 4.479 ; Rise       ; CLK             ;
+;  SRAM_ADDR[1]  ; CLK        ; 4.527 ; 4.527 ; Rise       ; CLK             ;
+;  SRAM_ADDR[2]  ; CLK        ; 4.551 ; 4.551 ; Rise       ; CLK             ;
+;  SRAM_ADDR[3]  ; CLK        ; 4.544 ; 4.544 ; Rise       ; CLK             ;
+;  SRAM_ADDR[4]  ; CLK        ; 4.429 ; 4.429 ; Rise       ; CLK             ;
+;  SRAM_ADDR[5]  ; CLK        ; 4.570 ; 4.570 ; Rise       ; CLK             ;
+;  SRAM_ADDR[6]  ; CLK        ; 4.577 ; 4.577 ; Rise       ; CLK             ;
+;  SRAM_ADDR[7]  ; CLK        ; 4.571 ; 4.571 ; Rise       ; CLK             ;
+;  SRAM_ADDR[8]  ; CLK        ; 4.502 ; 4.502 ; Rise       ; CLK             ;
+;  SRAM_ADDR[9]  ; CLK        ; 4.480 ; 4.480 ; Rise       ; CLK             ;
+;  SRAM_ADDR[10] ; CLK        ; 4.436 ; 4.436 ; Rise       ; CLK             ;
+;  SRAM_ADDR[11] ; CLK        ; 4.435 ; 4.435 ; Rise       ; CLK             ;
+; SRAM_DQ[*]     ; CLK        ; 3.927 ; 3.927 ; Rise       ; CLK             ;
+;  SRAM_DQ[0]    ; CLK        ; 4.164 ; 4.164 ; Rise       ; CLK             ;
+;  SRAM_DQ[1]    ; CLK        ; 4.145 ; 4.145 ; Rise       ; CLK             ;
+;  SRAM_DQ[2]    ; CLK        ; 4.040 ; 4.040 ; Rise       ; CLK             ;
+;  SRAM_DQ[3]    ; CLK        ; 4.063 ; 4.063 ; Rise       ; CLK             ;
+;  SRAM_DQ[4]    ; CLK        ; 3.927 ; 3.927 ; Rise       ; CLK             ;
+;  SRAM_DQ[5]    ; CLK        ; 3.934 ; 3.934 ; Rise       ; CLK             ;
+;  SRAM_DQ[6]    ; CLK        ; 4.042 ; 4.042 ; Rise       ; CLK             ;
+;  SRAM_DQ[7]    ; CLK        ; 4.050 ; 4.050 ; Rise       ; CLK             ;
+; SRAM_OE_N      ; CLK        ; 4.531 ; 4.531 ; Rise       ; CLK             ;
+; SRAM_WE_N      ; CLK        ; 4.574 ; 4.574 ; Rise       ; CLK             ;
++----------------+------------+-------+-------+------------+-----------------+
+
+
++----------------------------------------------------------+
+; Progagation Delay                                        ;
++------------+-------------+-------+-------+-------+-------+
+; Input Port ; Output Port ; RR    ; RF    ; FR    ; FF    ;
++------------+-------------+-------+-------+-------+-------+
+; MODE       ; LED4        ;       ; 8.931 ; 8.931 ;       ;
+; SRAM_DQ[0] ; SRAM_DQ[8]  ; 9.777 ;       ;       ; 9.777 ;
+; SRAM_DQ[1] ; SRAM_DQ[9]  ; 9.867 ;       ;       ; 9.867 ;
+; SRAM_DQ[2] ; SRAM_DQ[10] ; 9.608 ;       ;       ; 9.608 ;
+; SRAM_DQ[3] ; SRAM_DQ[11] ; 9.501 ;       ;       ; 9.501 ;
+; SRAM_DQ[4] ; SRAM_DQ[12] ; 9.631 ;       ;       ; 9.631 ;
+; SRAM_DQ[5] ; SRAM_DQ[13] ; 9.727 ;       ;       ; 9.727 ;
+; SRAM_DQ[6] ; SRAM_DQ[14] ; 9.890 ;       ;       ; 9.890 ;
+; SRAM_DQ[7] ; SRAM_DQ[15] ; 9.848 ;       ;       ; 9.848 ;
++------------+-------------+-------+-------+-------+-------+
+
+
++----------------------------------------------------------+
+; Minimum Progagation Delay                                ;
++------------+-------------+-------+-------+-------+-------+
+; Input Port ; Output Port ; RR    ; RF    ; FR    ; FF    ;
++------------+-------------+-------+-------+-------+-------+
+; MODE       ; LED4        ;       ; 4.787 ; 4.787 ;       ;
+; SRAM_DQ[0] ; SRAM_DQ[8]  ; 5.074 ;       ;       ; 5.074 ;
+; SRAM_DQ[1] ; SRAM_DQ[9]  ; 5.131 ;       ;       ; 5.131 ;
+; SRAM_DQ[2] ; SRAM_DQ[10] ; 5.044 ;       ;       ; 5.044 ;
+; SRAM_DQ[3] ; SRAM_DQ[11] ; 4.974 ;       ;       ; 4.974 ;
+; SRAM_DQ[4] ; SRAM_DQ[12] ; 5.061 ;       ;       ; 5.061 ;
+; SRAM_DQ[5] ; SRAM_DQ[13] ; 5.127 ;       ;       ; 5.127 ;
+; SRAM_DQ[6] ; SRAM_DQ[14] ; 5.151 ;       ;       ; 5.151 ;
+; SRAM_DQ[7] ; SRAM_DQ[15] ; 5.172 ;       ;       ; 5.172 ;
++------------+-------------+-------+-------+-------+-------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; CLK        ; CLK      ; 165393   ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; CLK        ; CLK      ; 165393   ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 11    ; 11   ;
+; Unconstrained Input Port Paths  ; 102   ; 102  ;
+; Unconstrained Output Ports      ; 62    ; 62   ;
+; Unconstrained Output Port Paths ; 155   ; 155  ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Mon Jul 05 23:01:44 2021
+Info: Command: quartus_sta text_convert_synthesis -c TEXT_CONVERT
+Info: qsta_default_script.tcl version: #1
+Warning (136002): Ignored duplicate of assignment PARTITION_SOURCE for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_PRESERVE_HIGH_SPEED_TILES for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_IGNORE_SOURCE_FILE_CHANGES for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_ALWAYS_USE_QXP_NETLIST for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_IMPORT_NEW_ASSIGNMENTS for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_IMPORT_EXISTING_ASSIGNMENTS for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_IMPORT_EXISTING_LOGICLOCK_REGIONS for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_IMPORT_PIN_ASSIGNMENTS for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_IMPORT_PROMOTE_ASSIGNMENTS for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_TYPE for node ""
+Warning (136002): Ignored duplicate of assignment ALLOW_MULTIPLE_PERSONAS for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_ASD_REGION_ID for node ""
+Warning (136002): Ignored duplicate of assignment CROSS_BOUNDARY_OPTIMIZATIONS for node ""
+Warning (136002): Ignored duplicate of assignment PROPAGATE_CONSTANTS_ON_INPUTS for node ""
+Warning (136002): Ignored duplicate of assignment PROPAGATE_INVERSIONS_ON_INPUTS for node ""
+Warning (136002): Ignored duplicate of assignment REMOVE_LOGIC_ON_UNCONNECTED_OUTPUTS for node ""
+Warning (136002): Ignored duplicate of assignment MERGE_EQUIVALENT_INPUTS for node ""
+Warning (136002): Ignored duplicate of assignment MERGE_EQUIVALENT_BIDIRS for node ""
+Warning (136002): Ignored duplicate of assignment ABSORB_PATHS_FROM_OUTPUTS_TO_INPUTS for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_EXTRACT_HARD_BLOCK_NODES for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_BACK_ANNOTATION for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_COLOR for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_SOURCE for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_PRESERVE_HIGH_SPEED_TILES for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_IGNORE_SOURCE_FILE_CHANGES for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_ALWAYS_USE_QXP_NETLIST for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_IMPORT_NEW_ASSIGNMENTS for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_IMPORT_EXISTING_ASSIGNMENTS for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_IMPORT_EXISTING_LOGICLOCK_REGIONS for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_IMPORT_PIN_ASSIGNMENTS for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_IMPORT_PROMOTE_ASSIGNMENTS for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_TYPE for node ""
+Warning (136002): Ignored duplicate of assignment ALLOW_MULTIPLE_PERSONAS for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_ASD_REGION_ID for node ""
+Warning (136002): Ignored duplicate of assignment CROSS_BOUNDARY_OPTIMIZATIONS for node ""
+Warning (136002): Ignored duplicate of assignment PROPAGATE_CONSTANTS_ON_INPUTS for node ""
+Warning (136002): Ignored duplicate of assignment PROPAGATE_INVERSIONS_ON_INPUTS for node ""
+Warning (136002): Ignored duplicate of assignment REMOVE_LOGIC_ON_UNCONNECTED_OUTPUTS for node ""
+Warning (136002): Ignored duplicate of assignment MERGE_EQUIVALENT_INPUTS for node ""
+Warning (136002): Ignored duplicate of assignment MERGE_EQUIVALENT_BIDIRS for node ""
+Warning (136002): Ignored duplicate of assignment ABSORB_PATHS_FROM_OUTPUTS_TO_INPUTS for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_EXTRACT_HARD_BLOCK_NODES for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_BACK_ANNOTATION for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_COLOR for node ""
+Info (11104): Parallel Compilation has detected 8 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 4 of the 4 physical processors detected instead.
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Info (332104): Reading SDC File: 'text_convert_synthesis.sdc'
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow Model
+Info (332146): Worst-case setup slack is 26.389
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    26.389         0.000 CLK 
+Info (332146): Worst-case hold slack is 0.445
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.445         0.000 CLK 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is 17.407
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    17.407         0.000 CLK 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Info (332146): Worst-case setup slack is 33.178
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    33.178         0.000 CLK 
+Info (332146): Worst-case hold slack is 0.215
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.215         0.000 CLK 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is 17.518
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    17.518         0.000 CLK 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 44 warnings
+    Info: Peak virtual memory: 4616 megabytes
+    Info: Processing ended: Mon Jul 05 23:01:46 2021
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:01
+
+
