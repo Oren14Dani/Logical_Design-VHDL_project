@@ -2,11 +2,11 @@
 Virtual implementation of logic circuits based on hardware components‎.
 
 ## General description
-+ The system picks up a string of characters in asynchronous serial communication and then transmits the string back in
- asynchronous serial communication in reverse order (from end to beginning). This means that the information will be
- transmitted in reverse order relative to the order in which it is received.
- For example, if the string "kcuL dooG" is received, the string that will be transmitted,
- received and displayed on the smartphone or tablet will be: "Good Luck".
+The system picks up a string of characters in asynchronous serial communication and then transmits the string back in
+asynchronous serial communication in reverse order (from end to beginning). This means that the information will be
+transmitted in reverse order relative to the order in which it is received.
+For example, if the string "kcuL dooG" is received, the string that will be transmitted,
+received and displayed on the smartphone or tablet will be: "Good Luck".
 
 ## Technical description
 + The system will operate from a single clock of 27MHz.
@@ -31,7 +31,7 @@ Virtual implementation of logic circuits based on hardware components‎.
  the number displayed on the display will be 0000).
 
 ## LED indicator
-LED1 will turn on whenever the system is active.
-LED2 will only turn on when the system is in reception mode and will be off in any other mode.
-LED3 will turn on only when the system is in transmission mode and will be turned off in any other mode.
-LED4 will only turn on when MODE is pressed.
++ LED1 will turn on whenever the system is active.
++ LED2 will only turn on when the system is in reception mode and will be off in any other mode.
++ LED3 will turn on only when the system is in transmission mode and will be turned off in any other mode.
++ LED4 will only turn on when MODE is pressed.
