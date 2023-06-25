@@ -1,0 +1,22 @@
+
+State Machine - |TEXT_CONVERT|CONTROLLER:u2_controller|fsm_state
+Name fsm_state.transmit fsm_state.load_data fsm_state.save_data fsm_state.recive fsm_state.idle 
+fsm_state.idle 0 0 0 0 0 
+fsm_state.recive 0 0 0 1 1 
+fsm_state.save_data 0 0 1 0 1 
+fsm_state.load_data 0 1 0 0 1 
+fsm_state.transmit 1 0 0 0 1 
+
+State Machine - |TEXT_CONVERT|UART_TOP:u1_uart|UART_TX:u2_UART_TX|fsm_state
+Name fsm_state.send_end_bit fsm_state.send_data fsm_state.send_start_bit fsm_state.idle 
+fsm_state.idle 0 0 0 0 
+fsm_state.send_start_bit 0 0 1 1 
+fsm_state.send_data 0 1 0 1 
+fsm_state.send_end_bit 1 0 0 1 
+
+State Machine - |TEXT_CONVERT|UART_TOP:u1_uart|UART_RX:u1_UART_RX|fsm_state
+Name fsm_state.get_end_bit fsm_state.get_data fsm_state.get_start_bit fsm_state.idle 
+fsm_state.idle 0 0 0 0 
+fsm_state.get_start_bit 0 0 1 1 
+fsm_state.get_data 0 1 0 1 
+fsm_state.get_end_bit 1 0 0 1 
