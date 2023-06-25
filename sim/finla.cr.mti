@@ -1,0 +1,130 @@
+{C:/Users/User/OneDrive - ort braude college of engineering/STUDY/PLD - VHDL/final EX/src/tb/sim_uart_tx.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/User/OneDrive - ort braude college of engineering/STUDY/PLD - VHDL/final EX/src/tb/sim_uart_tx.vhd}
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity sim_uart_tx
+-- Compiling architecture behave of sim_uart_tx
+
+} {} {}} {C:/Users/User/OneDrive - ort braude college of engineering/STUDY/PLD - VHDL/final EX/src/CONTROLLER.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/User/OneDrive - ort braude college of engineering/STUDY/PLD - VHDL/final EX/src/CONTROLLER.vhd}
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Loading package NUMERIC_STD
+-- Compiling entity CONTROLLER
+-- Compiling architecture behave of CONTROLLER
+
+} {} {}} {C:/Users/User/OneDrive - ort braude college of engineering/STUDY/PLD - VHDL/final EX/src/UART_RX.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/User/OneDrive - ort braude college of engineering/STUDY/PLD - VHDL/final EX/src/UART_RX.vhd}
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity UART_RX
+-- Compiling architecture behave of UART_RX
+
+} {} {}} {C:/Users/User/OneDrive - ort braude college of engineering/STUDY/PLD - VHDL/final EX/src/TEXT_CONVERT.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/User/OneDrive - ort braude college of engineering/STUDY/PLD - VHDL/final EX/src/TEXT_CONVERT.vhd}
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Loading package NUMERIC_STD
+-- Compiling entity TEXT_CONVERT
+-- Compiling architecture struct of TEXT_CONVERT
+
+} {} {}} {C:/Users/User/OneDrive - ort braude college of engineering/STUDY/PLD - VHDL/final EX/src/tb/uart_tb.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/User/OneDrive - ort braude college of engineering/STUDY/PLD - VHDL/final EX/src/tb/uart_tb.vhd}
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity uart_tb
+-- Compiling architecture behave of uart_tb
+
+} {} {}} {C:/Users/User/OneDrive - ort braude college of engineering/STUDY/PLD - VHDL/final EX/src/UART_TOP.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/User/OneDrive - ort braude college of engineering/STUDY/PLD - VHDL/final EX/src/UART_TOP.vhd}
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity UART_TOP
+-- Compiling architecture srtuct of UART_TOP
+
+} {} {}} {C:/Users/User/OneDrive - ort braude college of engineering/STUDY/PLD - VHDL/final EX/src/UART_TX.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/User/OneDrive - ort braude college of engineering/STUDY/PLD - VHDL/final EX/src/UART_TX.vhd}
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity UART_TX
+-- Compiling architecture behave of UART_TX
+
+} {} {}} {C:/Users/User/OneDrive - ort braude college of engineering/STUDY/PLD - VHDL/final EX/src/tb/sim_sram.vhd} {2 {vcom -work work -2002 -explicit {C:/Users/User/OneDrive - ort braude college of engineering/STUDY/PLD - VHDL/final EX/src/tb/sim_sram.vhd}
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity sim_sram
+-- Compiling architecture sim of sim_sram
+** Warning: C:/Users/User/OneDrive - ort braude college of engineering/STUDY/PLD - VHDL/final EX/src/tb/sim_sram.vhd(31): (vcom-1236) Shared variables must be of a protected type.
+
+
+} {} {}} {C:/Users/User/OneDrive - ort braude college of engineering/STUDY/PLD - VHDL/final EX/src/down_der.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/User/OneDrive - ort braude college of engineering/STUDY/PLD - VHDL/final EX/src/down_der.vhd}
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity down_der
+-- Compiling architecture behave of down_der
+
+} {} {}} {C:/Users/User/OneDrive - ort braude college of engineering/STUDY/PLD - VHDL/final EX/src/tb/text_convert_tb.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/User/OneDrive - ort braude college of engineering/STUDY/PLD - VHDL/final EX/src/tb/text_convert_tb.vhd}
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Compiling entity TEXT_CONVERT_tb
+-- Compiling architecture struct of TEXT_CONVERT_tb
+
+} {} {}} {C:/Users/User/OneDrive - ort braude college of engineering/STUDY/PLD - VHDL/final EX/src/bcd_to_7seg.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/User/OneDrive - ort braude college of engineering/STUDY/PLD - VHDL/final EX/src/bcd_to_7seg.vhd}
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity bcd_to_7seg
+-- Compiling architecture behave of bcd_to_7seg
+
+} {} {}} {C:/Users/User/OneDrive - ort braude college of engineering/STUDY/PLD - VHDL/final EX/src/stabilizer.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/User/OneDrive - ort braude college of engineering/STUDY/PLD - VHDL/final EX/src/stabilizer.vhd}
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity stabilizer
+-- Compiling architecture struct of stabilizer
+
+} {} {}} {C:/Users/User/OneDrive - ort braude college of engineering/STUDY/PLD - VHDL/final EX/src/bin2bcd_12bit_sync.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/User/OneDrive - ort braude college of engineering/STUDY/PLD - VHDL/final EX/src/bin2bcd_12bit_sync.vhd}
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity bin2bcd_12bit_sync
+-- Compiling architecture Behavioral of bin2bcd_12bit_sync
+
+} {} {}} {C:/Users/User/OneDrive - ort braude college of engineering/STUDY/PLD - VHDL/final EX/src/tb/sim_uart_rx.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/User/OneDrive - ort braude college of engineering/STUDY/PLD - VHDL/final EX/src/tb/sim_uart_rx.vhd}
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity sim_uart_rx
+-- Compiling architecture behave of sim_uart_rx
+
+} {} {}}
